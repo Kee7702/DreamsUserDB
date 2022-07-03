@@ -1,3 +1,4 @@
+document.getElementById('loading').remove()
 do {
   document.getElementsByTagName('script')[0].remove();
 }
