@@ -1,7 +1,6 @@
 document.getElementById('imp').src = (ids.imp);
 document.getElementById('username').innerHTML = (ids.username);
 document.getElementById('importCount').innerHTML = (ids.importCount);
-document.getElementById('importCountPending').innerHTML = (ids.importCountPending);
 document.getElementById('maxRequestsD').innerHTML = (ids.maxRequestsD);
 document.getElementById('maxRequestsW').innerHTML = (ids.maxRequestsW);
 document.getElementById('maxRequestsM').innerHTML = (ids.maxRequestsM);
