@@ -1,4 +1,7 @@
 document.getElementById('audioImports').innerHTML = "Loading Audio Imports...";
+var script = document.createElement('script');
+script.src = "/loadingimg.js";
+document.getElementsByTagName('head')[0].appendChild(script);
 ids.imp = "https://cdn.indreams.me/c448c1b006615cf77572817af86607e1_5"
 ids.username = "mauriciovivanco"
 ids.importCount = "10"
