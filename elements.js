@@ -1,6 +1,11 @@
 document.getElementById('imp').src = (ids.imp);
 document.getElementById('username').innerHTML = (ids.username);
 document.getElementById('importCount').innerHTML = (ids.importCount);
+document.getElementById('importCountPending').innerHTML = (ids.importCountPending);
+document.getElementById('maxRequestsD').innerHTML = (ids.maxRequestsD);
+document.getElementById('maxRequestsW').innerHTML = (ids.maxRequestsW);
+document.getElementById('maxRequestsM').innerHTML = (ids.maxRequestsM);
+document.getElementById('maxRequestsY').innerHTML = (ids.maxRequestsY);
 document.getElementById('importLimit').innerHTML = (ids.importLimit);
 document.getElementById('importTime').innerHTML = (ids.importTime);
 document.getElementById('userID').innerHTML = (ids.userID);
