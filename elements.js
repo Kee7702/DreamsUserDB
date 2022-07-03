@@ -8,4 +8,6 @@ document.getElementById('maxRequestsM').innerHTML = (ids.maxRequestsM);
 document.getElementById('maxRequestsY').innerHTML = (ids.maxRequestsY);
 document.getElementById('importLimit').innerHTML = (ids.importLimit);
 document.getElementById('importTime').innerHTML = (ids.importTime);
+document.getElementById('pendingLimit').innerHTML = (ids.pendingLimit);
+document.getElementById('pendingRequests').innerHTML = (ids.pendingRequests);
 document.getElementById('userID').innerHTML = (ids.userID);
