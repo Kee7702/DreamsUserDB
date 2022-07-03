@@ -9,5 +9,5 @@ var script = document.createElement('script');
 script.src = "/elements.js";
 document.getElementsByTagName('head')[0].appendChild(script);
 var script = document.createElement('script');
-script.src = "/user/FreakZiIIA8EK6vP3zHfN/imports/0.js";
+script.src = "/user/mauriciovivancod0jydbNdcd/imports/0.js";
 document.getElementsByTagName('head')[0].appendChild(script);
