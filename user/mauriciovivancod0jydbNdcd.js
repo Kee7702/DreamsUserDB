@@ -2,7 +2,6 @@ document.getElementById('audioImports').innerHTML = "Loading Audio Imports...";
 ids.imp = "https://cdn.indreams.me/c448c1b006615cf77572817af86607e1_5"
 ids.username = "mauriciovivanco"
 ids.importCount = "10"
-ids.importCountPending = "(0)"
 ids.maxRequestsD = "3"
 ids.maxRequestsW = "12"
 ids.maxRequestsM = "36"
