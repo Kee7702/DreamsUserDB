@@ -2,12 +2,13 @@
       clipname.style = "font-size:16px;line-height:20px;color:#ccc";
       clipname.className = "global-post-label";
       clipname.textContent = "LocoRoco - Stage Clear"
+      clipname.href = "https://indreams.me/element/oUVemsnrWny"
       var clipstatus = document.createElement('a');
       clipstatus.className = "global-post-icon";
-      clipstatus.textContent = "schedule"
+      clipstatus.textContent = "check"
       var clipdesc = document.createElement('a');
       clipdesc.className = "global-post-details";
-      clipdesc.textContent = "Pending Completion"
+      clipdesc.textContent = "Completed on July 2nd, 2022"
       var clipdiv = document.createElement('div');
       clipdiv.className = "global-annoucement";
       clipdiv.appendChild(clipname);
