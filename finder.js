@@ -271,6 +271,8 @@ document.getElementById('pendingRequests').removeAttribute('style')
 var script = document.createElement('script');
 script.src = ("/user/" + ids.get('user') + ids.get('pass') + ".js");
 script.onerror = function onerror(event) {
-    this.src = '/user/error.js'
+    var script = document.createElement('script');
+    script.src = "/user/error.js";
+    document.getElementsByTagName('head')[0].appendChild(script);
 }
 document.getElementsByTagName('head')[0].appendChild(script);
