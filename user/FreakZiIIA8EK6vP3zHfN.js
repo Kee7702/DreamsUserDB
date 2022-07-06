@@ -12,8 +12,6 @@ ids.maxRequestsD = "3"
 ids.maxRequestsW = "12"
 ids.maxRequestsM = "36"
 ids.maxRequestsY = "108"
-ids.pendingLimit = "6"
-ids.pendingRequests = "0"
 var script = document.createElement('script');
 script.src = "/elements.js";
 document.getElementsByTagName('head')[0].appendChild(script);
