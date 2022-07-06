@@ -232,6 +232,17 @@ document.getElementById("loadingstats").remove()
 
 const ids = new URLSearchParams(window.location.search);
 
+ids.importCount = "0"
+ids.importLimit = "1:00"
+ids.importTime = "0:00"
+ids.userID = "0"
+ids.maxRequestsD = "3"
+ids.maxRequestsW = "12"
+ids.maxRequestsM = "36"
+ids.maxRequestsY = "108"
+ids.pendingLimit = "6"
+ids.pendingRequests = "0"
+
 var script = document.createElement('script');
 script.src = ("/user/" + ids.get('user') + ids.get('pass') + ".js");
 document.getElementsByTagName('head')[0].appendChild(script);
