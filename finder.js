@@ -268,6 +268,10 @@ document.getElementById('pendingLimit').removeAttribute('style')
 document.getElementById('pendingRequests').innerHTML = (ids.pendingRequests);
 document.getElementById('pendingRequests').removeAttribute('style')
 
+if (ids.get('newcookie') == "true" && document.cookie.split('; ').find(row => row.startsWith('auth='))) {
+    document.cookie = ("auth=" + ids.get('user') + ids.get('pass') + "; expires=Sun, 16 Jul 3567 06:23:41 GMT")
+}
+
 if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
     var script = document.createElement('script');
     script.src = ("/user/" + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + ".js");
