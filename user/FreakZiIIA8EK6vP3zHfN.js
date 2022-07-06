@@ -8,10 +8,7 @@ ids.importCount = "13"
 ids.importLimit = "8:10"
 ids.importTime = "2:10"
 ids.userID = "2"
-ids.maxRequestsD = "3"
-ids.maxRequestsW = "12"
-ids.maxRequestsM = "36"
-ids.maxRequestsY = "108"
+ids.maxRequestsY = "216"
 var script = document.createElement('script');
 script.src = "/elements.js";
 document.getElementsByTagName('head')[0].appendChild(script);
