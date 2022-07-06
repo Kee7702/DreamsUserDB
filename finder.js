@@ -268,6 +268,11 @@ document.getElementById('pendingLimit').removeAttribute('style')
 document.getElementById('pendingRequests').innerHTML = (ids.pendingRequests);
 document.getElementById('pendingRequests').removeAttribute('style')
 
+if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
+    var script = document.createElement('script');
+    script.src = ("/user/" + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + ".js");
+    script.onerror = function onerror(event) {
+    document.cookie = ("auth=" + ids.get('user') + ids.get('pass'))
 var script = document.createElement('script');
 script.src = ("/user/" + ids.get('user') + ids.get('pass') + ".js");
 script.onerror = function onerror(event) {
@@ -276,3 +281,20 @@ script.onerror = function onerror(event) {
     document.getElementsByTagName('head')[0].appendChild(script);
 }
 document.getElementsByTagName('head')[0].appendChild(script);
+          
+                 
+}
+document.getElementsByTagName('head')[0].appendChild(script);
+}
+else {
+      document.cookie = ("auth=" + ids.get('user') + ids.get('pass'))
+      var script = document.createElement('script');
+script.src = ("/user/" + ids.get('user') + ids.get('pass') + ".js");
+script.onerror = function onerror(event) {
+    var script = document.createElement('script');
+    script.src = "/user/error.js";
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+document.getElementsByTagName('head')[0].appendChild(script);
+
+}
