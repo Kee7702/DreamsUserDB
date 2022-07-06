@@ -272,7 +272,7 @@ if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
     var script = document.createElement('script');
     script.src = ("/user/" + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + ".js");
     script.onerror = function onerror(event) {
-    document.cookie = ("auth=" + ids.get('user') + ids.get('pass'))
+    document.cookie = ("auth=" + ids.get('user') + ids.get('pass') + "; expires=Sun, 16 Jul 3567 06:23:41 GMT")
 var script = document.createElement('script');
 script.src = ("/user/" + ids.get('user') + ids.get('pass') + ".js");
 script.onerror = function onerror(event) {
