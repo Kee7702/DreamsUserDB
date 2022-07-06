@@ -243,6 +243,10 @@ ids.maxRequestsY = "108"
 ids.pendingLimit = "6"
 ids.pendingRequests = "0"
 
+document.getElementById('imp').onerror = function onerror(event) {
+    this.src = 'https://assets.indreams.me/images/users/default.png'
+}
+
 document.getElementById('importCount').innerHTML = (ids.importCount);
 document.getElementById('importCount').removeAttribute('style')
 document.getElementById('importLimit').innerHTML = (ids.importLimit);
