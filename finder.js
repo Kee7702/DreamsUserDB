@@ -1,6 +1,7 @@
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
       statinfo.textContent = "Loading...";
+      statinfo.style = "font-family:'Material Icons'";
       statinfo.id = "importCount";
       var statsubtitle = document.createElement('p');
       statsubtitle.className = "dreamsdb infotitle infodesc";
@@ -22,7 +23,8 @@
       document.getElementById("stats").appendChild(statcontainerouter)
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
-      statinfo.textContent = "Loading...";
+      statinfo.textContent = "loop";
+      statinfo.style = "font-family:'Material Icons'";
       statinfo.id = "importLimit";
       var statsubtitle = document.createElement('p');
       statsubtitle.className = "dreamsdb infotitle infodesc";
@@ -44,7 +46,8 @@
       document.getElementById("stats").appendChild(statcontainerouter)
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
-      statinfo.textContent = "Loading...";
+      statinfo.textContent = "loop";
+      statinfo.style = "font-family:'Material Icons'";
       statinfo.id = "importTime";
       var statsubtitle = document.createElement('p');
       statsubtitle.className = "dreamsdb infotitle infodesc";
@@ -66,7 +69,8 @@
       document.getElementById("stats").appendChild(statcontainerouter)
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
-      statinfo.textContent = "Loading...";
+      statinfo.textContent = "loop";
+      statinfo.style = "font-family:'Material Icons'";
       statinfo.id = "userID";
       var statsubtitle = document.createElement('p');
       statsubtitle.className = "dreamsdb infotitle infodesc";
@@ -88,7 +92,8 @@
       document.getElementById("stats").appendChild(statcontainerouter)
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
-      statinfo.textContent = "Loading...";
+      statinfo.textContent = "loop";
+      statinfo.style = "font-family:'Material Icons'";
       statinfo.id = "maxRequestsD";
       var statsubtitle = document.createElement('p');
       statsubtitle.className = "dreamsdb infotitle infodesc";
@@ -110,7 +115,8 @@
       document.getElementById("stats").appendChild(statcontainerouter)
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
-      statinfo.textContent = "Loading...";
+      statinfo.textContent = "loop";
+      statinfo.style = "font-family:'Material Icons'";
       statinfo.id = "maxRequestsW";
       var statsubtitle = document.createElement('p');
       statsubtitle.className = "dreamsdb infotitle infodesc";
@@ -132,7 +138,8 @@
       document.getElementById("stats").appendChild(statcontainerouter)
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
-      statinfo.textContent = "Loading...";
+      statinfo.textContent = "loop";
+      statinfo.style = "font-family:'Material Icons'";
       statinfo.id = "maxRequestsM";
       var statsubtitle = document.createElement('p');
       statsubtitle.className = "dreamsdb infotitle infodesc";
@@ -154,7 +161,8 @@
       document.getElementById("stats").appendChild(statcontainerouter)
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
-      statinfo.textContent = "Loading...";
+      statinfo.textContent = "loop";
+      statinfo.style = "font-family:'Material Icons'";
       statinfo.id = "maxRequestsY";
       var statsubtitle = document.createElement('p');
       statsubtitle.className = "dreamsdb infotitle infodesc";
@@ -176,7 +184,8 @@
       document.getElementById("stats").appendChild(statcontainerouter)
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
-      statinfo.textContent = "Loading...";
+      statinfo.textContent = "loop";
+      statinfo.style = "font-family:'Material Icons'";
       statinfo.id = "pendingLimit";
       var statsubtitle = document.createElement('p');
       statsubtitle.className = "dreamsdb infotitle infodesc";
@@ -198,7 +207,8 @@
       document.getElementById("stats").appendChild(statcontainerouter)
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
-      statinfo.textContent = "Loading...";
+      statinfo.textContent = "loop";
+      statinfo.style = "font-family:'Material Icons'";
       statinfo.id = "pendingRequests";
       var statsubtitle = document.createElement('p');
       statsubtitle.className = "dreamsdb infotitle infodesc";
