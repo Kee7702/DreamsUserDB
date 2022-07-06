@@ -1,6 +1,6 @@
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
-      statinfo.textContent = "Loading...";
+      statinfo.textContent = "loop";
       statinfo.style = "font-family:'Material Icons'";
       statinfo.id = "importCount";
       var statsubtitle = document.createElement('p');
