@@ -1,5 +1,5 @@
 {
-  userdata: [
+  [
     {
       username: 'FreakZiIIA8',
       imphash: '064eb4e5a0fec49042aea43eb9b492bf',
@@ -16,7 +16,7 @@
       hasImports: true
     }
   ],
-  imports: [
+  [
     {
         "import_name": "LocoRoco - Kuttetekaruna",
         "import_status": "1",
