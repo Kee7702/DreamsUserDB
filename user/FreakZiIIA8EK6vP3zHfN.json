@@ -6,10 +6,10 @@
     "importLimit": "8:10",
     "importTime": "2:10",
     "userID": "2",
-    "maxRequestsD": "0",
+    "maxRequestsD": "8",
     "maxRequestsW": "12",
     "maxRequestsM": "36",
-    "maxRequestsY": "216",
+    "maxRequestsY": "Infinite",
     "pendingLimit": "6",
     "pendingRequests": "0",
     "hasImports": true
