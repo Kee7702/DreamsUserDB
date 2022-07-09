@@ -1,0 +1,117 @@
+{
+  userdata: [
+    {
+      username: 'FreakZiIIA8',
+      imphash: '064eb4e5a0fec49042aea43eb9b492bf',
+      importCount: '16',
+      importLimit: '8:10',
+      importTime: '2:10',
+      userID: '2',
+      maxRequestsD: '0',
+      maxRequestsW: '12',
+      maxRequestsM: '36',
+      maxRequestsY: '216',
+      pendingLimit: '6',
+      pendingRequests: '0',
+      hasImports: true
+    }
+  ],
+  imports: [
+    {
+        "import_name": "LocoRoco - Kuttetekaruna",
+        "import_status": "1",
+        "import_date": "July 8, 2022",
+        "creation_id": "oQAuXdAEUfW"
+    },
+    {
+        "import_name": "LocoRoco - Moinoi Moinoi",
+        "import_status": "1",
+        "import_date": "July 8, 2022",
+        "creation_id": "oPcoQeShJmD"
+    },
+    {
+        "import_name": "LocoRoco - Pupapu Poapoa",
+        "import_status": "1",
+        "import_date": "July 8, 2022",
+        "creation_id": "oVxBNdQDpZd"
+    },
+    {
+        "import_name": "LocoRoco - Bu Bu Poruche",
+        "import_status": "1",
+        "import_date": "July 2, 2022",
+        "creation_id": "oPLAuQhUDFU"
+    },
+    {
+        "import_name": "LocoRoco - Stage Clear",
+        "import_status": "1",
+        "import_date": "July 2, 2022",
+        "creation_id": "oUVemsnrWny"
+    },
+    {
+        "import_name": "LocoRoco - Game Over",
+        "import_status": "1",
+        "import_date": "July 2, 2022",
+        "creation_id": "oUVemsnrWny"
+    },
+    {
+        "import_name": "LocoRoco - Dadhi Dado Da",
+        "import_status": "1",
+        "import_date": "July 1, 2022",
+        "creation_id": "oxbZWccHCaR"
+    },
+    {
+        "import_name": "LocoRoco - Moja's Song",
+        "import_status": "1",
+        "import_date": "July 1, 2022",
+        "creation_id": "oxbZWccHCaR"
+    },
+    {
+        "import_name": "LocoRoco - Instrumental Main Theme",
+        "import_status": "1",
+        "import_date": "July 1, 2022",
+        "creation_id": "oxbZWccHCaR"
+    },
+    {
+        "import_name": "LocoRoco - Nyokki",
+        "import_status": "1",
+        "import_date": "June 18th, 2022",
+        "creation_id": "oAJyNLwipkL"
+    },
+    {
+        "import_name": "LittleBigPlanet 2 Move Pack - main_move_2",
+        "import_status": "1",
+        "import_date": "May 28th, 2022",
+        "creation_id": "ojtGAwqPwCG"
+    },
+    {
+        "import_name": "Talking Ginger - Toothbrush Timer",
+        "import_status": "1",
+        "import_date": "April 10th, 2022",
+        "creation_id": "oRiVNHFzVNi"
+    },
+    {
+        "import_name": "LittleBigPlanet Recovery - i_pizz_travelling",
+        "import_status": "1",
+        "import_date": "April 3rd, 2022",
+        "creation_id": "oeJCaLCywgb"
+    },
+    {
+        "import_name": "Astro's Playroom - PS5 Hover Track",
+        "import_status": "1",
+        "import_date": "February 4th, 2022",
+        "creation_id": "ofjhcoGppzw"
+    },
+    {
+        "import_name": "LittleBigPlanet 3 Alpha - The Pod",
+        "import_status": "1",
+        "import_date": "December 28th, 2021",
+        "creation_id": "oMCgjuuYsjs"
+    },
+    {
+        "import_name": "Among Us - Sabotage Alarn",
+        "import_status": "1",
+        "import_date": "September 27th, 2020",
+        "creation_id": "oQXUZgXLUVp"
+    }
+  ]
+}
