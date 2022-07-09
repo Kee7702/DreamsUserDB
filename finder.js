@@ -267,6 +267,24 @@ document.getElementById('pendingLimit').innerHTML = importlist[0].pendingLimit
 document.getElementById('pendingLimit').removeAttribute('style')
 document.getElementById('pendingRequests').innerHTML = importlist[0].pendingRequests
 document.getElementById('pendingRequests').removeAttribute('style')
+if(importlist[0].hasImports == true) {
+      document.getElementById('audioImports').innerHTML = "Audio Imports";}
+      var clipname = document.createElement('a');
+      clipname.style = "font-size:16px;line-height:20px;color:#ccc;pointer-events:none";
+      clipname.className = "global-post-label";
+      clipname.textContent = "Loading Imports"
+      var clipstatus = document.createElement('a');
+      clipstatus.style = "pointer-events:none"
+      clipstatus.className = "global-post-icon";
+      clipstatus.textContent = "loop"
+      var clipdiv = document.createElement('div');
+      clipdiv.className = "global-annoucement";
+      clipdiv.id = "loading";
+      clipdiv.appendChild(clipname);
+      clipdiv.appendChild(clipstatus);
+      var clipchild = document.getElementById("audioClips").firstChild;
+      document.getElementById("audioClips").insertBefore(clipdiv, clipchild)
+      }
 do{imports++
    importicon = null
       var clipname = document.createElement('a');
@@ -280,9 +298,9 @@ do{imports++
       clipdesc.className = "global-post-details";
       var clipdiv = document.createElement('div');
       clipdiv.className = "global-annoucement";
-      if (importlist[imports].import_status -= "0") {importicon = "schedule";
+      if (importlist[imports].import_status == "0") {importicon = "schedule";
       clipdesc.textContent = "Pending Completion"}else{}
-      if (importlist[imports].import_status =- "1") {importicon = "check";
+      if (importlist[imports].import_status == "1") {importicon = "check";
       clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);
       clipdesc.textContent = ("Completed on " + importlist[imports].import_date)}else{}
       if (importlist[imports].import_status == "2") {importicon = "close";
