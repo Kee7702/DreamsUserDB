@@ -245,6 +245,23 @@ if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
 document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
+                 if(importlist[0].hasImports == true) {
+      document.getElementById('audioImports').innerHTML = "Audio Imports";}
+      var clipname = document.createElement('a');
+      clipname.style = "font-size:16px;line-height:20px;color:#ccc;pointer-events:none";
+      clipname.className = "global-post-label";
+      clipname.textContent = "Loading Imports"
+      var clipstatus = document.createElement('a');
+      clipstatus.style = "pointer-events:none"
+      clipstatus.className = "global-post-icon";
+      clipstatus.textContent = "loop"
+      var clipdiv = document.createElement('div');
+      clipdiv.className = "global-annoucement";
+      clipdiv.id = "loading";
+      clipdiv.appendChild(clipname);
+      clipdiv.appendChild(clipstatus);
+      var clipchild = document.getElementById("audioClips").firstChild;
+      document.getElementById("audioClips").insertBefore(clipdiv, clipchild);
 document.getElementById('imp').src = ("https://cdn.indreams.me/" + importlist[0].imphash)
 document.getElementById('username').innerHTML = importlist[0].username
 document.getElementById('importCount').innerHTML = importlist[0].importCount
@@ -267,24 +284,6 @@ document.getElementById('pendingLimit').innerHTML = importlist[0].pendingLimit
 document.getElementById('pendingLimit').removeAttribute('style')
 document.getElementById('pendingRequests').innerHTML = importlist[0].pendingRequests
 document.getElementById('pendingRequests').removeAttribute('style')
-if(importlist[0].hasImports == true) {
-      document.getElementById('audioImports').innerHTML = "Audio Imports";}
-      var clipname = document.createElement('a');
-      clipname.style = "font-size:16px;line-height:20px;color:#ccc;pointer-events:none";
-      clipname.className = "global-post-label";
-      clipname.textContent = "Loading Imports"
-      var clipstatus = document.createElement('a');
-      clipstatus.style = "pointer-events:none"
-      clipstatus.className = "global-post-icon";
-      clipstatus.textContent = "loop"
-      var clipdiv = document.createElement('div');
-      clipdiv.className = "global-annoucement";
-      clipdiv.id = "loading";
-      clipdiv.appendChild(clipname);
-      clipdiv.appendChild(clipstatus);
-      var clipchild = document.getElementById("audioClips").firstChild;
-      document.getElementById("audioClips").insertBefore(clipdiv, clipchild)
-      }
 do{imports++
    importicon = null
       var clipname = document.createElement('a');
