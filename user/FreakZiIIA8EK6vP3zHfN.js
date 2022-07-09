@@ -13,6 +13,3 @@ ids.pendingRequests = "2"
 var script = document.createElement('script');
 script.src = "/elements.js";
 document.getElementsByTagName('head')[0].appendChild(script);
-var script = document.createElement('script');
-script.src = "/user/FreakZiIIA8EK6vP3zHfN/imports/14.js";
-document.getElementsByTagName('head')[0].appendChild(script);
