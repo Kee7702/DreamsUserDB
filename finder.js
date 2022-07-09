@@ -232,63 +232,67 @@ document.getElementById("loadingstats").remove()
 
 const ids = new URLSearchParams(window.location.search);
 
-ids.importCount = "0"
-ids.importLimit = "1:00"
-ids.importTime = "0:00"
-ids.userID = "0"
-ids.maxRequestsD = "3"
-ids.maxRequestsW = "12"
-ids.maxRequestsM = "36"
-ids.maxRequestsY = "108"
-ids.pendingLimit = "6"
-ids.pendingRequests = "0"
-
 document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
 
-document.getElementById('importCount').innerHTML = (ids.importCount);
-document.getElementById('importCount').removeAttribute('style')
-document.getElementById('importLimit').innerHTML = (ids.importLimit);
-document.getElementById('importLimit').removeAttribute('style')
-document.getElementById('importTime').innerHTML = (ids.importTime);
-document.getElementById('importTime').removeAttribute('style')
-document.getElementById('userID').innerHTML = (ids.userID);
-document.getElementById('userID').removeAttribute('style')
-document.getElementById('maxRequestsD').innerHTML = (ids.maxRequestsD);
-document.getElementById('maxRequestsD').removeAttribute('style')
-document.getElementById('maxRequestsW').innerHTML = (ids.maxRequestsW);
-document.getElementById('maxRequestsW').removeAttribute('style')
-document.getElementById('maxRequestsM').innerHTML = (ids.maxRequestsM);
-document.getElementById('maxRequestsM').removeAttribute('style')
-document.getElementById('maxRequestsY').innerHTML = (ids.maxRequestsY);
-document.getElementById('maxRequestsY').removeAttribute('style')
-document.getElementById('pendingLimit').innerHTML = (ids.pendingLimit);
-document.getElementById('pendingLimit').removeAttribute('style')
-document.getElementById('pendingRequests').innerHTML = (ids.pendingRequests);
-document.getElementById('pendingRequests').removeAttribute('style')
-
-if (ids.get('newcookie') == "true" && document.cookie.split('; ').find(row => row.startsWith('auth='))) {
+if (ids.get('user') && ids.get('pass')) {
     document.cookie = ("auth=" + ids.get('user') + ids.get('pass') + "; expires=Sun, 16 Jul 3567 06:23:41 GMT")
 }
 
 if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
-    var script = document.createElement('script');
-    script.src = ("/user/" + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + ".js");
-    script.onerror = function onerror(event) {
-    document.cookie = ("auth=" + ids.get('user') + ids.get('pass') + "; expires=Sun, 16 Jul 3567 06:23:41 GMT")
-var script = document.createElement('script');
-script.src = ("/user/" + ids.get('user') + ids.get('pass') + ".js");
-script.onerror = function onerror(event) {
-    var script = document.createElement('script');
-    script.src = "/user/error.js";
-    document.getElementsByTagName('head')[0].appendChild(script);
+(async()=>{const res=await fetch(`/user/` + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + `.json`);const json=await res.json();importlist=(json);imports=0
+document.getElementById('imp').onerror = function onerror(event) {
+    this.src = 'https://assets.indreams.me/images/users/default.png'
 }
-document.getElementsByTagName('head')[0].appendChild(script);
-          
-                 
-}
-document.getElementsByTagName('head')[0].appendChild(script);
+document.getElementById('imp').src = ("https://cdn.indreams.me/" + importlist[0].imphash)
+document.getElementById('username').innerHTML = importlist[0].username
+document.getElementById('importCount').innerHTML = importlist[0].importCount
+document.getElementById('importCount').removeAttribute('style')
+document.getElementById('importLimit').innerHTML = importlist[0].importLimit
+document.getElementById('importLimit').removeAttribute('style')
+document.getElementById('importTime').innerHTML = importlist[0].importTime
+document.getElementById('importTime').removeAttribute('style')
+document.getElementById('userID').innerHTML = importlist[0].userID
+document.getElementById('userID').removeAttribute('style')
+document.getElementById('maxRequestsD').innerHTML = importlist[0].maxRequestsD
+document.getElementById('maxRequestsD').removeAttribute('style')
+document.getElementById('maxRequestsW').innerHTML = importlist[0].maxRequestsW
+document.getElementById('maxRequestsW').removeAttribute('style')
+document.getElementById('maxRequestsM').innerHTML = importlist[0].maxRequestsM
+document.getElementById('maxRequestsM').removeAttribute('style')
+document.getElementById('maxRequestsY').innerHTML = importlist[0].maxRequestsY
+document.getElementById('maxRequestsY').removeAttribute('style')
+document.getElementById('pendingLimit').innerHTML = importlist[0].pendingLimit
+document.getElementById('pendingLimit').removeAttribute('style')
+document.getElementById('pendingRequests').innerHTML = importlist[0].pendingRequests
+document.getElementById('pendingRequests').removeAttribute('style')
+do{imports++
+   importicon = null
+      var clipname = document.createElement('a');
+      clipname.style = "font-size:16px;line-height:20px;color:#ccc";
+      clipname.className = "global-post-label";
+      clipname.textContent = importlist[imports].import_name;
+      var clipstatus = document.createElement('a');
+      clipstatus.className = "global-post-icon";
+      clipstatus.textContent = "check"
+      var clipdesc = document.createElement('a');
+      clipdesc.className = "global-post-details";
+      var clipdiv = document.createElement('div');
+      clipdiv.className = "global-annoucement";
+      if (importlist[imports].import_status -= "0") {importicon = "schedule";
+      clipdesc.textContent = "Pending Completion"}else{}
+      if (importlist[imports].import_status =- "1") {importicon = "check";
+      clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);
+      clipdesc.textContent = ("Completed on " + importlist[imports].import_date)}else{}
+      if (importlist[imports].import_status == "2") {importicon = "close";
+      clipdesc.textContent = "Import Removed"}else{}
+      clipdiv.appendChild(clipname);
+      clipdiv.appendChild(clipstatus);
+      clipdiv.appendChild(clipdesc);
+      document.getElementById("audioClips").appendChild(clipdiv);
+console.log=(importlist[imports])}
+while(importlist[imports+1]);})()
 }
 else {
       document.cookie = ("auth=" + ids.get('user') + ids.get('pass'))
