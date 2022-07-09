@@ -1,0 +1,17 @@
+[
+  {
+    "username": "mauriciovivanco",
+    "imphash": "c448c1b006615cf77572817af86607e1",
+    "importCount": "19",
+    "importLimit": "7:40",
+    "importTime": "1:40",
+    "userID": "1",
+    "maxRequestsD": "9",
+    "maxRequestsW": "21",
+    "maxRequestsM": "36",
+    "maxRequestsY": "Infinite",
+    "pendingLimit": "6",
+    "pendingRequests": "0",
+    "hasImports": false
+  }
+]
