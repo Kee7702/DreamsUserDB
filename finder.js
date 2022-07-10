@@ -271,6 +271,7 @@ document.getElementById('pendingRequests').innerHTML = importlist[0].pendingRequ
 document.getElementById('pendingRequests').removeAttribute('style')
 do{imports++
    importicon = null
+   var importaudio = null;
       var clipname = document.createElement('a');
       clipname.style = "font-size:16px;line-height:20px;color:#ccc";
       clipname.className = "global-post-label";
@@ -288,9 +289,9 @@ do{imports++
       if (importlist[imports].import_status == "2") {clipdesc.textContent = "Import Removed";clipstatus.textContent = "close"}else{}
       if (importlist[imports].import_status == "3") {clipstatus.textContent = "campaign"}else{}
       if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
-      var importaudio = new Audio('/user/' + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + "/" + importlist[imports].creation_id + ".mp3");
+      if (importlist[imports].hasFile) {var importaudio = new Audio('/user/' + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + "/" + importlist[imports].creation_id + ".mp3");
       importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
-      importaudio.controls = true;
+      importaudio.controls = true;}else{}
       clipdiv.appendChild(clipname);
       clipdiv.appendChild(clipstatus);
       clipdiv.appendChild(clipdesc);
