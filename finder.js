@@ -287,6 +287,7 @@ do{imports++
       if (importlist[imports].import_status == "1") {clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);clipdesc.textContent = ("Completed on " + importlist[imports].import_date);clipstatus.textContent = "check"}else{}
       if (importlist[imports].import_status == "2") {clipdesc.textContent = "Import Removed";clipstatus.textContent = "close"}else{}
       if (importlist[imports].import_status == "3") {clipstatus.textContent = "campaign"}else{}
+      if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
       clipdiv.appendChild(clipname);
       clipdiv.appendChild(clipstatus);
       clipdiv.appendChild(clipdesc);
