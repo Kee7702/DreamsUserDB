@@ -247,7 +247,7 @@ document.getElementById('imp').onerror = function onerror(event) {
 }
                  if(importlist[0].hasImports == true) {
       document.getElementById('audioImports').innerHTML = "Audio Imports";}
-document.getElementById('imp').src = ("https://cdn.indreams.me/" + importlist[0].imphash)
+document.getElementById('imp').src = ("https://cdn.indreams.me/" + importlist[0].imphash + "_5")
 document.getElementById('username').innerHTML = importlist[0].username
 document.getElementById('importCount').innerHTML = importlist[0].importCount
 document.getElementById('importCount').removeAttribute('style')
