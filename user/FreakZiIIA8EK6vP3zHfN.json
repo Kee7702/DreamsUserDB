@@ -102,12 +102,14 @@
       "import_name": "LittleBigPlanet 3 Alpha - The Pod",
       "import_status": "1",
       "import_date": "December 28th, 2021",
-      "creation_id": "oMCgjuuYsjs"
+      "creation_id": "oMCgjuuYsjs",
+      "hasFile": true
   },
   {
       "import_name": "Among Us - Sabotage Alarn",
       "import_status": "1",
       "import_date": "September 27th, 2020",
-      "creation_id": "oQXUZgXLUVp"
+      "creation_id": "oQXUZgXLUVp",
+      "hasFile": true
   }
 ]
