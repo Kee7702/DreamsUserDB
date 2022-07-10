@@ -12,6 +12,6 @@
     "maxRequestsY": "Infinite",
     "pendingLimit": "6",
     "pendingRequests": "0",
-    "hasImports": false
+    "hasImports": true
   }
 ]
