@@ -16,6 +16,12 @@
   },
   {
       "import_name": "Unnamed",
+      "import_status": "0",
+      "import_date": "January 1st, 1970",
+      "creation_id": "null"
+  },
+  {
+      "import_name": "Unnamed",
       "import_status": "1",
       "import_date": "January 1st, 1970",
       "creation_id": "null"
