@@ -282,6 +282,7 @@ do{imports++
       clipdesc.className = "global-post-details";
       var clipdiv = document.createElement('div');
       clipdiv.className = "global-annoucement";
+      clipdiv.style = "background:#222";
       if (importlist[imports].import_status == "0") {importicon = "schedule";
       clipdesc.textContent = "Pending Completion"}else{}
       if (importlist[imports].import_status == "1") {importicon = "check";
