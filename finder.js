@@ -288,6 +288,9 @@ do{imports++
       if (importlist[imports].import_status == "2") {clipdesc.textContent = "Import Removed";clipstatus.textContent = "close"}else{}
       if (importlist[imports].import_status == "3") {clipstatus.textContent = "campaign"}else{}
       if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
+      var importaudio = new Audio('/user/' + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + "/" + importlist[imports].creation_id + ".mp3");
+      importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
+      clipdiv.appendChild(importaudio);
       clipdiv.appendChild(clipname);
       clipdiv.appendChild(clipstatus);
       clipdiv.appendChild(clipdesc);
