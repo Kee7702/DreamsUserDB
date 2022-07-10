@@ -277,19 +277,16 @@ do{imports++
       clipname.textContent = importlist[imports].import_name;
       var clipstatus = document.createElement('a');
       clipstatus.className = "global-post-icon";
-      clipstatus.textContent = "check"
+      clipstatus.textContent = "schedule"
       var clipdesc = document.createElement('a');
       clipdesc.className = "global-post-details";
       var clipdiv = document.createElement('div');
       clipdiv.className = "global-annoucement";
       clipdiv.style = "background:#222";
-      if (importlist[imports].import_status == "0") {importicon = "schedule";
-      clipdesc.textContent = "Pending Completion"}else{}
-      if (importlist[imports].import_status == "1") {importicon = "check";
-      clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);
-      clipdesc.textContent = ("Completed on " + importlist[imports].import_date)}else{}
-      if (importlist[imports].import_status == "2") {importicon = "close";
-      clipdesc.textContent = "Import Removed"}else{}
+      if (importlist[imports].import_status == "0") {clipdesc.textContent = "Pending Completion";clipstatus.textContent = "schedule"}else{}
+      if (importlist[imports].import_status == "1") {clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);clipdesc.textContent = ("Completed on " + importlist[imports].import_date);clipstatus.textContent = "check"}else{}
+      if (importlist[imports].import_status == "2") {clipdesc.textContent = "Import Removed";clipstatus.textContent = "close"}else{}
+      if (importlist[imports].import_status == "3") {clipstatus.textContent = "campaign"}else{}
       clipdiv.appendChild(clipname);
       clipdiv.appendChild(clipstatus);
       clipdiv.appendChild(clipdesc);
