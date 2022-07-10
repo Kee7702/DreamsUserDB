@@ -290,10 +290,11 @@ do{imports++
       if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
       var importaudio = new Audio('/user/' + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + "/" + importlist[imports].creation_id + ".mp3");
       importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
-      clipdiv.appendChild(importaudio);
+      importaudio.controls = true;
       clipdiv.appendChild(clipname);
       clipdiv.appendChild(clipstatus);
       clipdiv.appendChild(clipdesc);
+      clipdiv.appendChild(importaudio);
       document.getElementById("audioClips").appendChild(clipdiv);
 console.log=(importlist[imports])}
 while(importlist[imports+1]);})()
