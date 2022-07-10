@@ -84,13 +84,15 @@
       "import_name": "Talking Ginger - Toothbrush Timer",
       "import_status": "1",
       "import_date": "April 10th, 2022",
-      "creation_id": "oRiVNHFzVNi"
+      "creation_id": "oRiVNHFzVNi",
+      "hasFile": true
   },
   {
       "import_name": "LittleBigPlanet Recovery - i_pizz_travelling",
       "import_status": "1",
       "import_date": "April 3rd, 2022",
-      "creation_id": "oeJCaLCywgb"
+      "creation_id": "oeJCaLCywgb",
+      "hasFile": true
   },
   {
       "import_name": "Astro's Playroom - PS5 Hover Track",
