@@ -293,6 +293,9 @@ do{imports++
       clipdiv.appendChild(clipstatus);
       clipdiv.appendChild(clipdesc);
       if (importlist[imports].hasFile && !importlist[imports].batchedImport) {var importaudio = new Audio('/user/audio/' + importlist[imports].creation_id + ".mp3");
+      importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
+      importaudio.controls = true;
+      clipdiv.appendChild(importaudio);}else{}
       if (importlist[imports].hasFile && importlist[imports].batchedImport) {var importaudio = new Audio('/user/audio/' + importlist[imports].creation_id + importlist[imports].batchedImport + ".mp3");
       importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
       importaudio.controls = true;
