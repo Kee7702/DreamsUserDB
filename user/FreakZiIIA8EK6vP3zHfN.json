@@ -76,10 +76,11 @@
       "creation_id": "oAJyNLwipkL"
   },
   {
-      "import_name": "LittleBigPlanet 2 Move Pack - main_move_2",
+      "import_name": "LittleBigPlanet 2 Move Pack - move_main_2",
       "import_status": "1",
       "import_date": "May 28th, 2022",
-      "creation_id": "ojtGAwqPwCG"
+      "creation_id": "ojtGAwqPwCG",
+      "hasFile": true
   },
   {
       "import_name": "Talking Ginger - Toothbrush Timer",
