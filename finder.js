@@ -305,7 +305,7 @@ do{imports++
       importaudio.volume = 0.75;
       clipdiv.appendChild(importaudio);}else{}
       document.getElementById("audioClips").appendChild(clipdiv);
-      const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p));
+      const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'download']}));
       if (importlist[imports].hasFile) {document.getElementsByTagName('audio')[imports-1].volume = 0.75;}else{}
 console.log=(importlist[imports])}
 while(importlist[imports+1]);})()
