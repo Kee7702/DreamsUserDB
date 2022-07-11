@@ -305,7 +305,7 @@ do{imports++
       importaudio.volume = 0.75;
       clipdiv.appendChild(importaudio);}else{}
       document.getElementById("audioClips").appendChild(clipdiv);
-      const players = Array.from(document.getElementsByTagName('audio')[imports-1]).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'fullscreen', 'download'],toggleInvert:false,volume:0.75,invertTime:false,mediaMetadata:{ title: importlist[imports].import_name, artist: importlist[0].username, album: 'UserDB Audio Import', artwork: [] }}));
+      const player = new Plyr(document.getElementsByTagName('audio')[imports-1], {controls:['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'fullscreen', 'download'],toggleInvert:false,volume:0.75,invertTime:false,mediaMetadata:{ title: importlist[imports].import_name, artist: importlist[0].username, album: 'UserDB Audio Import', artwork: [] }});
 console.log=(importlist[imports])}
 while(importlist[imports+1]);})()
 }
