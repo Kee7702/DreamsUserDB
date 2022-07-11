@@ -305,7 +305,7 @@ do{imports++
       importaudio.volume = 0.75;
       clipdiv.appendChild(importaudio);}else{}
       document.getElementById("audioClips").appendChild(clipdiv);
-      const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'fullscreen', 'download'],toggleInvert:false,volume:0.75,invertTime:false}));
+      const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p));
 console.log=(importlist[imports])}
 while(importlist[imports+1]);})()
 }
