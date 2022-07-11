@@ -306,6 +306,7 @@ do{imports++
       clipdiv.appendChild(importaudio);}else{}
       document.getElementById("audioClips").appendChild(clipdiv);
       const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p));
+      if (importlist[imports].hasFile) {document.getElementsByTagName('audio')[imports].volume = 0.75;}else{}
 console.log=(importlist[imports])}
 while(importlist[imports+1]);})()
 }
