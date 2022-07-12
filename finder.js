@@ -295,15 +295,13 @@ do{imports++
       if (importlist[imports].hasFile && !importlist[imports].batchedImport) {var importaudio = new Audio('/user/audio/' + importlist[imports].creation_id + ".mp3");
       importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
       importaudio.controls = true;
-      importaudio.loop = true;
       clipdiv.appendChild(importaudio);}else{}
       if (importlist[imports].hasFile && importlist[imports].batchedImport) {var importaudio = new Audio('/user/audio/' + importlist[imports].creation_id + importlist[imports].batchedImport + ".mp3");
       importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
       importaudio.controls = true;
-      importaudio.loop = true;
       clipdiv.appendChild(importaudio);}else{}
       document.getElementById("audioClips").appendChild(clipdiv);
-      const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'fullscreen', 'download'],toggleInvert:false,volume:0.75,invertTime:false,storage:false}));
+      const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'download'],settings:['captions', 'quality', 'speed', 'loop'],toggleInvert:false,volume:0.75,invertTime:false,storage:false}));
 console.log=(importlist[imports])}
 while(importlist[imports+1]);})()
 }
