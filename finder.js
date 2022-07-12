@@ -279,7 +279,7 @@ do{imports++
     this.src = 'https://cdn.indreams.me/f4e28ecea5d09b18c822c2ff0db10924_10'
 }
       var clipname = document.createElement('a');
-      clipname.style = "font-size:16px;line-height:20px;color:#ccc;margin-left:40px";
+      clipname.style = "font-size:16px;line-height:20px;color:#ccc";
       clipname.className = "global-post-label";
       clipname.textContent = importlist[imports].import_name;
       var clipstatus = document.createElement('a');
@@ -287,12 +287,11 @@ do{imports++
       clipstatus.textContent = "schedule"
       var clipdesc = document.createElement('a');
       clipdesc.className = "global-post-details";
-      clipdesc.style = "margin-left:40px";
       var clipdiv = document.createElement('div');
       clipdiv.className = "global-annoucement";
       clipdiv.style = "background:#222";
       if (importlist[imports].import_status == "0") {clipdesc.textContent = "Pending Completion";clipstatus.textContent = "schedule"}else{}
-      if (importlist[imports].import_status == "1") {clipdiv.appendChild(clipimg);clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);clipimg.src = ("https://cdn.indreams.me/" + importlist[imports].imgHash + "_10");clipdesc.textContent = ("Completed on " + importlist[imports].import_date);clipstatus.textContent = "check"}else{}
+      if (importlist[imports].import_status == "1") {clipname.style = "font-size:16px;line-height:20px;color:#ccc;margin-left:40px";clipdesc.style = "margin-left:40px";clipdiv.appendChild(clipimg);clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);clipimg.src = ("https://cdn.indreams.me/" + importlist[imports].imgHash + "_10");clipdesc.textContent = ("Completed on " + importlist[imports].import_date);clipstatus.textContent = "check"}else{}
       if (importlist[imports].import_status == "2") {clipdesc.textContent = "Import Removed";clipstatus.textContent = "close"}else{}
       if (importlist[imports].import_status == "3") {clipstatus.textContent = "campaign"}else{}
       if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
@@ -308,7 +307,7 @@ do{imports++
       importaudio.controls = true;
       clipdiv.appendChild(importaudio);}else{}
       document.getElementById("audioClips").appendChild(clipdiv);
-      const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'download'],settings:['captions', 'quality', 'speed', 'loop'],toggleInvert:false,volume:0.75,invertTime:false,storage:false,loop:{active:true}}));
+      const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'download'],settings:['captions', 'quality', 'speed', 'loop'],toggleInvert:false,volume:0.75,invertTime:false,storage:false,loop:{active:true}}));
 console.log=(importlist[imports])}
 while(importlist[imports+1]);})()
 }
