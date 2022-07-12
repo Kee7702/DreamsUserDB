@@ -292,11 +292,10 @@ do{imports++
       clipdiv.className = "global-annoucement";
       clipdiv.style = "background:#222";
       if (importlist[imports].import_status == "0") {clipdesc.textContent = "Pending Completion";clipstatus.textContent = "schedule"}else{}
-      if (importlist[imports].import_status == "1") {clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);clipimg.src = ("https://cdn.indreams.me/" + importlist[imports].imgHash + "_10");clipdesc.textContent = ("Completed on " + importlist[imports].import_date);clipstatus.textContent = "check"}else{}
+      if (importlist[imports].import_status == "1") {clipdiv.appendChild(clipimg);clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);clipimg.src = ("https://cdn.indreams.me/" + importlist[imports].imgHash + "_10");clipdesc.textContent = ("Completed on " + importlist[imports].import_date);clipstatus.textContent = "check"}else{}
       if (importlist[imports].import_status == "2") {clipdesc.textContent = "Import Removed";clipstatus.textContent = "close"}else{}
       if (importlist[imports].import_status == "3") {clipstatus.textContent = "campaign"}else{}
       if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
-      clipdiv.appendChild(clipimg);
       clipdiv.appendChild(clipname);
       clipdiv.appendChild(clipstatus);
       clipdiv.appendChild(clipdesc);
