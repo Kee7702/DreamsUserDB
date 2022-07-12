@@ -301,6 +301,7 @@ do{imports++
       if (importlist[imports].googleID) {var importaudio = new Audio('https://drive.google.com/uc?confirm=t&export=download&id=' + importlist[imports].googleID);
       importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
       importaudio.controls = true;
+      importaudio.preload = 'none';
       clipdiv.appendChild(importaudio);}else{}
       document.getElementById("audioClips").appendChild(clipdiv);
       const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'download'],settings:['captions', 'quality', 'speed', 'loop'],toggleInvert:false,volume:0.75,invertTime:false,storage:false,loop:{active:true}}));
