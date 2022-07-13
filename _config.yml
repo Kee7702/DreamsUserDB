@@ -1,3 +1,6 @@
 title: Dreams UserDB
 description: Access your database of imported content!
 remote_theme: Kee7702/Keeterial
+gems:
+
+  - jekyll-redirect-from
