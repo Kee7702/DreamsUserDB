@@ -1,4 +1,4 @@
-(async()=>{const res=await fetch(`/imports/data.json`);const json=await res.json();importlist=(json);imports=0
+(async()=>{const res=await fetch(`/imports/data.json`);const json=await res.json();importlist=(json);imports=-1
 
                  if(importlist) {
       document.getElementById('audioImports').innerHTML = "Audio Imports";}
