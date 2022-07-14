@@ -269,7 +269,7 @@ document.getElementById('pendingLimit').innerHTML = importlist[0].pendingLimit
 document.getElementById('pendingLimit').removeAttribute('style')
 document.getElementById('pendingRequests').innerHTML = importlist[0].pendingRequests
 document.getElementById('pendingRequests').removeAttribute('style')
-do{imports++
+setTimeout(do{imports++
    importicon = null
    var importaudio = null;
    var clipimg = null;
@@ -307,7 +307,7 @@ do{imports++
       const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'download'],settings:['captions', 'quality', 'speed', 'loop'],toggleInvert:false,volume:0.75,invertTime:false,storage:false,loop:{active:true}}));
 console.log=(importlist[imports]);}
 while(importlist[imports+1]);})()
-}
+},1000);
 else {
       document.cookie = ("auth=" + ids.get('user') + ids.get('pass'))
       var script = document.createElement('script');
