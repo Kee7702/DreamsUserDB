@@ -298,7 +298,7 @@ do{imports++
       clipdiv.appendChild(clipname);
       clipdiv.appendChild(clipstatus);
       clipdiv.appendChild(clipdesc);
-      if (importlist[imports].googleID) {var importaudio = new Audio('https://drive.google.com/uc?confirm=t&export=download&id=' + importlist[imports].googleID);
+      if (importlist[imports].googleID) {var importaudio = new Audio('/imports/audio/' + importlist[imports].import_name + '.mp3');
       importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
       importaudio.controls = true;
       importaudio.preload = 'none';
