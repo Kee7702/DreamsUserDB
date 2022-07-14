@@ -2,7 +2,7 @@
 
                  if(importlist) {
       document.getElementById('audioImports').innerHTML = "Audio Imports";}
-do{setTimeout(() => {imports++
+do {imports++
    importicon = null
    var importaudio = null;
    var clipimg = null;
@@ -38,5 +38,5 @@ do{setTimeout(() => {imports++
       clipdiv.appendChild(importaudio);}else{}
       document.getElementById("audioClips").appendChild(clipdiv);
       const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'download'],settings:['captions', 'quality', 'speed', 'loop'],toggleInvert:false,volume:0.75,invertTime:false,storage:false,loop:{active:true}}));
-console.log=(importlist[imports])},1000);}
+console.log=(importlist[imports]);}
 while(importlist[imports+1]);})()
