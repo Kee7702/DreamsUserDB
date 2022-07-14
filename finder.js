@@ -269,7 +269,7 @@ document.getElementById('pendingLimit').innerHTML = importlist[0].pendingLimit
 document.getElementById('pendingLimit').removeAttribute('style')
 document.getElementById('pendingRequests').innerHTML = importlist[0].pendingRequests
 document.getElementById('pendingRequests').removeAttribute('style')
-do{imports++
+do{setTimeout(() => {imports++
    importicon = null
    var importaudio = null;
    var clipimg = null;
@@ -305,7 +305,7 @@ do{imports++
       clipdiv.appendChild(importaudio);}else{}
       document.getElementById("audioClips").appendChild(clipdiv);
       const players = Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'download'],settings:['captions', 'quality', 'speed', 'loop'],toggleInvert:false,volume:0.75,invertTime:false,storage:false,loop:{active:true}}));
-console.log=(importlist[imports])}
+console.log=(importlist[imports])}, 1000);}
 while(importlist[imports+1]);})()
 }
 else {
