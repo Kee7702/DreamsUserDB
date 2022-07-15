@@ -241,7 +241,7 @@ if (ids.get('user') && ids.get('pass')) {
 }
 
 if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
-(async()=>{const res=await fetch(`/user/` + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + `.json`);const json=await res.json();importlist=(json);imports=0
+(async()=>{const res=await fetch(`/assets/json/imports/user/` + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + `.json`);const json=await res.json();importlist=(json);imports=0
 document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
@@ -298,7 +298,7 @@ do{imports++
       clipdiv.appendChild(clipname);
       clipdiv.appendChild(clipstatus);
       clipdiv.appendChild(clipdesc);
-      if (importlist[imports].uploaded) {var importaudio = new Audio('/imports/audio/' + importlist[imports].import_name + '.mp3');
+      if (importlist[imports].uploaded) {var importaudio = new Audio('/assets/audio/mp3/' + importlist[imports].import_name + '.mp3');
       importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
       importaudio.controls = true;
       clipdiv.appendChild(importaudio);}else{}
