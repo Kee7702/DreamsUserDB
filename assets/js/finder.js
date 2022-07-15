@@ -298,9 +298,10 @@ do{imports++
       clipdiv.appendChild(clipname);
       clipdiv.appendChild(clipstatus);
       clipdiv.appendChild(clipdesc);
-      if (importlist[imports].uploaded) {var importaudio = new Audio('/assets/audio/mp3/' + importlist[imports].import_name + '.mp3');
+      if (importlist[imports].uploaded) {var importaudio = new Audio;
       importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
       importaudio.controls = true;
+      importaudio.innerHTML = (`<source src="/assets/audio/mp3/` + importlist[imports].import_name + `.mp3" type="audio/mp3"><source src="/assets/audio/aac/` + importlist[imports].import_name + `.aac" type="audio/x-aac">`)
       clipdiv.appendChild(importaudio);}else{}
       document.getElementById("audioClips").appendChild(clipdiv);
       Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'download'],settings:['captions', 'quality', 'speed', 'loop'],toggleInvert:false,volume:0.75,invertTime:false,storage:false,loop:{active:true}}));
