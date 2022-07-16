@@ -1,6 +1,6 @@
 [
   {
-    "username": "Database Condition Testing",
+    "username": "DBTest Instance 0 (Conditions)",
     "importCount": "0",
     "importLimit": "0",
     "importTime": "0",
@@ -49,6 +49,19 @@
       "import_name": "Content Type 2 with audio",
       "uploaded": true,
       "import_status": "2",
+      "import_date": "January 1st, 1970",
+      "creation_id": "null"
+  },
+  {
+      "import_name": "Content Type 3 no audio",
+      "import_status": "3",
+      "import_date": "January 1st, 1970",
+      "creation_id": "null"
+  },
+  {
+      "import_name": "Content Type 3 with audio",
+      "uploaded": true,
+      "import_status": "3",
       "import_date": "January 1st, 1970",
       "creation_id": "null"
   }
