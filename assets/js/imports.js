@@ -1,4 +1,4 @@
-(async()=>{const res=await fetch(`/assets/json/imports/data.json`);const json=await res.json();importlist=(json);imports=-1
+(async()=>{const res=await fetch(`/assets/json/imports/data.json`);const json=await res.json();importlist=(json);imports=new URLSearchParams(window.location.search).get('start') -1
 
                  if(importlist) {
       document.getElementById('audioImports').innerHTML = "Audio Imports";}
@@ -40,4 +40,4 @@ do {imports++
       document.getElementById("audioClips").appendChild(clipdiv);
     Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'download'],settings:['captions', 'quality', 'speed', 'loop'],toggleInvert:false,volume:0.75,invertTime:false,storage:false,loop:{active:true}}));
 console.log=(importlist[imports]);}
-while(importlist[imports+1]);})()
+while(importlist[imports+1] && (new URLSearchParams(window.location.search).get('limit')-0) + (new URLSearchParams(window.location.search).get('start')-0) - imports - 1 !== 0);})()
