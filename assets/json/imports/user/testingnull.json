@@ -14,28 +14,42 @@
     "hasImports": true
   },
   {
-      "import_name": "Unnamed",
+      "import_name": "Content Type 0 no audio",
       "import_status": "0",
       "import_date": "January 1st, 1970",
       "creation_id": "null"
   },
   {
-      "import_name": "Unnamed",
+      "import_name": "Content Type 0 widh audio",
+      "uploaded": true,
+      "import_status": "0",
+      "import_date": "January 1st, 1970",
+      "creation_id": "null"
+  },
+  {
+      "import_name": "Content Type 1 no audio",
       "import_status": "1",
       "import_date": "January 1st, 1970",
       "creation_id": "null"
   },
   {
-      "import_name": "Unnamed",
+      "import_name": "Content Type 1 with audio",
+      "uploaded": true,
+      "import_status": "1",
+      "import_date": "January 1st, 1970",
+      "creation_id": "null"
+  },
+  {
+      "import_name": "Content Type 2 no audio",
       "import_status": "2",
       "import_date": "January 1st, 1970",
       "creation_id": "null"
   },
   {
-      "import_name": "Unnamed",
-      "import_status": "3",
+      "import_name": "Content Type 2 with audio",
+      "uploaded": true,
+      "import_status": "2",
       "import_date": "January 1st, 1970",
-      "creation_id": "null",
-     "import_iconoverride": "videogame_asset"
+      "creation_id": "null"
   }
 ]
