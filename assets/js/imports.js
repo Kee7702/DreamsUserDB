@@ -1,3 +1,4 @@
+if (!new URLSearchParams(window.location.search).get('limit') && !new URLSearchParams(window.location.search).get('start')) {window.location.search = '?limit=10&start=0'};
 document.getElementById('importnavnext').href = ('/imports?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('limit')-0) + (new URLSearchParams(window.location.search).get('start')-0)));
 document.getElementById('importnavprev').href = ('/imports?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('start')-0) - (new URLSearchParams(window.location.search).get('limit')-0)));
 
