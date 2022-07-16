@@ -1,3 +1,6 @@
+document.getElementById('importnavnext').href = ('/?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('limit')-0) + (new URLSearchParams(window.location.search).get('start')-0)));
+document.getElementById('importnavprev').href = ('/?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('start')-0) - (new URLSearchParams(window.location.search).get('limit')-0)));
+
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
       statinfo.textContent = "loop";
@@ -241,7 +244,7 @@ if (ids.get('user') && ids.get('pass')) {
 }
 
 if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
-(async()=>{const res=await fetch(`/assets/json/imports/user/` + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + `.json`);const json=await res.json();importlist=(json);imports=0
+(async()=>{const res=await fetch(`/assets/json/imports/user/` + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1] + `.json`);const json=await res.json();importlist=(json);imports=new URLSearchParams(window.location.search).get('start') - 0
 document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
@@ -307,7 +310,7 @@ do{imports++
       document.getElementById("audioClips").appendChild(clipdiv);
       Array.from(document.getElementsByTagName('audio')).map((p) => new Plyr(p, {controls:['play-large', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'download'],settings:['captions', 'quality', 'speed', 'loop'],toggleInvert:false,volume:0.75,invertTime:false,storage:false,loop:{active:true}}));
 console.log=(importlist[imports]);}
-while(importlist[imports+1]);})()
+while(importlist[imports+1] && (new URLSearchParams(window.location.search).get('limit')-0) + (new URLSearchParams(window.location.search).get('start')-0) - imports !== 0);})()
 }
 else {
       document.cookie = ("auth=" + ids.get('user') + ids.get('pass'))
