@@ -1,10 +1,11 @@
 if (!new URLSearchParams(window.location.search).get('limit') && !new URLSearchParams(window.location.search).get('start')) {window.location.search = '?limit=10&start=0'};
-document.getElementById('importnavnext').href = ('/imports?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('limit')-0) + (new URLSearchParams(window.location.search).get('start')-0)));
-document.getElementById('importnavprev').href = ('/imports?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('start')-0) - (new URLSearchParams(window.location.search).get('limit')-0)));
 
 (async()=>{const res=await fetch(`/assets/json/imports/data.json`);const json=await res.json();importlist=(json);imports=new URLSearchParams(window.location.search).get('start') -1
 
                  if(importlist) {
+if (importlist[(((new URLSearchParams(window.location.search).get('limit')-0) + (new URLSearchParams(window.location.search).get('start')-0)))]) {document.getElementById('importnavnext').href = ('/imports?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('limit')-0) + (new URLSearchParams(window.location.search).get('start')-0)));}else{document.getElementById('importnavnext').remove()};
+if (importlist[(((new URLSearchParams(window.location.search).get('start')-0) - (new URLSearchParams(window.location.search).get('limit')-0)))]) {document.getElementById('importnavprev').href = ('/imports?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('start')-0) - (new URLSearchParams(window.location.search).get('limit')-0)));}else{document.getElementById('importnavprev').remove()};
+
       document.getElementById('audioImports').innerHTML = "Audio Imports";}
 do {imports++
    importicon = null
