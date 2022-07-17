@@ -248,7 +248,7 @@ if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
 document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
-           if(!importlist[0].hasImports) {document.getElementById('audioClipsContainer').remove()}else{}
+           if(!importlist[0].hasImports || importlist.length-1 == 0) {document.getElementById('audioClipsContainer').remove()}else{}
                  if(importlist[0].hasImports == true) {
 if (importlist[(((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0)))+1]) {document.getElementById('importnavnext').href = 'javascript:window.location.search = "start=' + ((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0)) + '"';}else{document.getElementById('importnavnext').remove()};
 if (importlist[(((new URLSearchParams(window.location.search).get('start')-0) - (document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0)))]) {document.getElementById('importnavprev').href = 'javascript:window.location.search = "start=' + ((new URLSearchParams(window.location.search).get('start')-0) - (document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0)) + '"';}else{document.getElementById('importnavprev').remove()};
