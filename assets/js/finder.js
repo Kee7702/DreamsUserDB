@@ -1,6 +1,4 @@
 if (!new URLSearchParams(window.location.search).get('limit') && !new URLSearchParams(window.location.search).get('start')) {window.location.search = '?limit=10&start=0'};
-document.getElementById('importnavnext').href = ('/?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('limit')-0) + (new URLSearchParams(window.location.search).get('start')-0)));
-document.getElementById('importnavprev').href = ('/?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('start')-0) - (new URLSearchParams(window.location.search).get('limit')-0)));
 
       var statinfo = document.createElement('p');
       statinfo.className = "dreamsdb infostats";
@@ -255,7 +253,7 @@ if (importlist[(((new URLSearchParams(window.location.search).get('start')-0) - 
       document.getElementById('audioImports').innerHTML = "Audio Imports";}
 document.getElementById('imp').src = ("https://cdn.indreams.me/" + importlist[0].imphash + "_9")
 document.getElementById('username').innerHTML = importlist[0].username
-document.getElementById('importCount').innerHTML = importlist[0].importCount
+document.getElementById('importCount').innerHTML = importlist.length-1
 document.getElementById('importCount').removeAttribute('style')
 document.getElementById('importLimit').innerHTML = importlist[0].importLimit
 document.getElementById('importLimit').removeAttribute('style')
