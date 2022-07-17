@@ -1,0 +1,14 @@
+[
+  {
+    "username": "DBTest2",
+    "importLimit": "0",
+    "importTime": "0",
+    "userID": "0",
+    "maxRequestsD": "0",
+    "maxRequestsW": "0",
+    "maxRequestsM": "0",
+    "maxRequestsY": "0",
+    "pendingLimit": "0",
+    "pendingRequests": "0"
+  }
+]
