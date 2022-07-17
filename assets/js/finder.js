@@ -250,6 +250,8 @@ document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
                  if(importlist[0].hasImports == true) {
+if (importlist[(((new URLSearchParams(window.location.search).get('limit')-0) + (new URLSearchParams(window.location.search).get('start')-0)))]) {document.getElementById('importnavnext').href = ('/?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('limit')-0) + (new URLSearchParams(window.location.search).get('start')-0)));}else{document.getElementById('importnavnext').remove()};
+if (importlist[(((new URLSearchParams(window.location.search).get('start')-0) - (new URLSearchParams(window.location.search).get('limit')-0)))]) {document.getElementById('importnavprev').href = ('/?limit=' + (new URLSearchParams(window.location.search).get('limit')-0) + '&start=' + ((new URLSearchParams(window.location.search).get('start')-0) - (new URLSearchParams(window.location.search).get('limit')-0)));}else{document.getElementById('importnavprev').remove()};
       document.getElementById('audioImports').innerHTML = "Audio Imports";}
 document.getElementById('imp').src = ("https://cdn.indreams.me/" + importlist[0].imphash + "_9")
 document.getElementById('username').innerHTML = importlist[0].username
