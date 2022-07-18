@@ -4,7 +4,12 @@
     "imphash": "c448c1b006615cf77572817af86607e1",
     "importLimit": "Calculating",
     "importTime": "Calculating",
-    "userID": "1",
+    "level": [
+      {
+        "persona": "curator",
+        "level": "148"
+      }
+    ],
     "maxRequestsD": "9",
     "maxRequestsW": "21",
     "maxRequestsM": "36",
