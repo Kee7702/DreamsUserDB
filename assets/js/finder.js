@@ -261,7 +261,7 @@ document.getElementById('importLimit').removeAttribute('style')
 document.getElementById('importTime').innerHTML = Math.floor(((importlist.length-1)*10)/60) + 'm ' + (((importlist.length-1)*10) % 60) + 's'
 document.getElementById('importTime').removeAttribute('style')
 document.getElementById('userLevel').className = (document.getElementById('userLevel').className + ' persona ' + importlist[0].level[0].persona)
-document.getElementById('userLevel').innerHTML = importlist[0].level[0].level + ' ' + (importlist[0].level[0].persona)[0].toUpperCase() + (importlist[0].level[0].persona).substring(1)
+document.getElementById('userLevel').innerHTML = importlist[0].level[0].level + (' ' + importlist[0].level[0].persona).toUpperCase() + (importlist[0].level[0].persona).substring(1)
 document.getElementById('userLevel').removeAttribute('style')
 document.getElementById('maxRequestsD').innerHTML = Math.floor(((importlist.length-1)/10) *3) + 1
 document.getElementById('maxRequestsD').removeAttribute('style')
