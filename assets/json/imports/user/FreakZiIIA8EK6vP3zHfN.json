@@ -4,7 +4,12 @@
     "imphash": "064eb4e5a0fec49042aea43eb9b492bf",
     "importLimit": "8:10",
     "importTime": "2:10",
-    "userID": "2",
+    "level": [
+      {
+        "persona": "artist",
+        "level": "223"
+      }
+    ],
     "maxRequestsD": "9",
     "maxRequestsW": "21",
     "maxRequestsM": "36",
