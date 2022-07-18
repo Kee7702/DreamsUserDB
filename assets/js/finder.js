@@ -248,6 +248,7 @@ if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
 document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
+document.getElementById('shareLink').href = 'https://dreams.kee7702.tk/?json=' + encodeURI(JSON.stringify(importlist))
 if ('' + importlist[0] == 'undefined') {importlist[0] = {}}else{}
                  if(importlist[0].hasImports == true) {
 if (importlist[(((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0)))+1]) {document.getElementById('importnavnext').href = ('/?start=' + ((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0)));}else{document.getElementById('importnavnext').remove()};
