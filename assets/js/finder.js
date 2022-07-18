@@ -239,12 +239,14 @@ document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
 
-if (ids.get('user') && ids.get('pass')) {
-    document.cookie = ("auth=" + ids.get('user') + ids.get('pass') + "; expires=Sun, 16 Jul 3567 06:23:41 GMT")
+if(document.cookie.split('; ').find(row => row.startsWith('auth='))) {document.cookie = ("user=" + (document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1]).split((document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1][document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1].length-10] + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1].substring(document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1].length-9)))[0] + "; expires=Sun, 16 Jul 3567 06:23:41 GMT");document.cookie = 'auth=; Max-Age=0;';}else{}
+
+if (ids.get('user')) {
+    document.cookie = ("user=" + ids.get('user') + "; expires=Sun, 16 Jul 3567 06:23:41 GMT")
 }
 
-if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
-(async()=>{const res=await fetch(`/assets/json/imports/user/` + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1].toUpperCase());const json=await res.json();if(new URLSearchParams(window.location.search).get('json')) {customjson = new URLSearchParams(window.location.search).get('json');importlist = JSON.parse(customjson)}else{importlist=(json)};imports=new URLSearchParams(window.location.search).get('start') - 0
+if (document.cookie.split('; ').find(row => row.startsWith('user='))) {
+(async()=>{const res=await fetch(`/assets/json/imports/user/` + document.cookie.split('; ').find(row => row.startsWith('user='))?.split('=')[1]);const json=await res.json();if(new URLSearchParams(window.location.search).get('json')) {customjson = new URLSearchParams(window.location.search).get('json');importlist = JSON.parse(customjson)}else{importlist=(json)};imports=new URLSearchParams(window.location.search).get('start') - 0
 document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
@@ -325,15 +327,4 @@ do{imports++
 console.log=(importlist[imports]);}
 while(importlist[imports+1] && (document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0) - imports !== 0);})()
 }
-else {
-      document.cookie = ("auth=" + ids.get('user') + ids.get('pass'))
-      var script = document.createElement('script');
-script.src = ("/user/" + ids.get('user') + ids.get('pass') + ".js");
-script.onerror = function onerror(event) {
-    var script = document.createElement('script');
-    script.src = "/user/error.js";
-    document.getElementsByTagName('head')[0].appendChild(script);
-}
-document.getElementsByTagName('head')[0].appendChild(script);
-
-}
+else {}
