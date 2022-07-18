@@ -2,19 +2,13 @@
   {
     "username": "mauriciovivanco",
     "imphash": "c448c1b006615cf77572817af86607e1",
-    "importLimit": "Calculating",
-    "importTime": "Calculating",
+    "importLimit": "360",
     "level": [
       {
         "persona": "curator",
         "level": "148"
       }
     ],
-    "maxRequestsD": "9",
-    "maxRequestsW": "21",
-    "maxRequestsM": "36",
-    "maxRequestsY": "Infinite",
-    "pendingLimit": "6",
     "pendingRequests": "0",
     "hasImports": true
   }
