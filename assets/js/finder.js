@@ -244,7 +244,7 @@ if (ids.get('user') && ids.get('pass')) {
 }
 
 if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
-(async()=>{const res=await fetch(`/assets/json/imports/user/` + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1].toUpperCase() + `.json`);const json=await res.json();if(new URLSearchParams(window.location.search).get('json')) {customjson = new URLSearchParams(window.location.search).get('json');importlist = JSON.parse(customjson)}else{importlist=(json)};imports=new URLSearchParams(window.location.search).get('start') - 0
+(async()=>{const res=await fetch(`/assets/json/imports/user/` + document.cookie.split('; ').find(row => row.startsWith('auth='))?.split('=')[1].toUpperCase());const json=await res.json();if(new URLSearchParams(window.location.search).get('json')) {customjson = new URLSearchParams(window.location.search).get('json');importlist = JSON.parse(customjson)}else{importlist=(json)};imports=new URLSearchParams(window.location.search).get('start') - 0
 document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
