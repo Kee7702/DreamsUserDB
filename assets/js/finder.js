@@ -74,13 +74,13 @@ if(new URLSearchParams(window.location.search).get('limit')){document.cookie = (
       statinfo.className = "dreamsdb infostats";
       statinfo.textContent = "loop";
       statinfo.style = "font-family:'Material Icons'";
-      statinfo.id = "userID";
+      statinfo.id = "userLevel";
       var statsubtitle = document.createElement('p');
       statsubtitle.className = "dreamsdb infotitle infodesc";
-      statsubtitle.textContent = "The database id for this user";
+      statsubtitle.textContent = "The last observed level for this user";
       var stattitle = document.createElement('p');
       stattitle.className = "dreamsdb infotitle";
-      stattitle.textContent = "User ID";
+      stattitle.textContent = "Dreamer Level";
       var stattitlecontainer = document.createElement('div');
       stattitlecontainer.className = "version-container";
       stattitlecontainer.appendChild(stattitle);
@@ -248,11 +248,9 @@ if (document.cookie.split('; ').find(row => row.startsWith('auth='))) {
 document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
-           if(!importlist[0].hasImports || importlist.length-1 == 0) {document.getElementById('audioClipsContainer').remove()}else{}
-                 if(importlist[0].hasImports == true && importlist.length-1 !== 0) {
-if (importlist[(((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0)))+1]) {document.getElementById('importnavnext').href = 'javascript:window.location.search = "start=' + ((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0)) + '"';}else{document.getElementById('importnavnext').remove()};
-if (importlist[(((new URLSearchParams(window.location.search).get('start')-0) - (document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0)))]) {document.getElementById('importnavprev').href = 'javascript:window.location.search = "start=' + ((new URLSearchParams(window.location.search).get('start')-0) - (document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0)) + '"';}else{document.getElementById('importnavprev').remove()};
-
+                 if(importlist[0].hasImports == true) {
+if (importlist[(((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0)))+1]) {document.getElementById('importnavnext').href = ('/?start=' + ((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0)));}else{document.getElementById('importnavnext').remove()};
+if (importlist[(((new URLSearchParams(window.location.search).get('start')-0) - (document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0)))]) {document.getElementById('importnavprev').href = ('/?start=' + ((new URLSearchParams(window.location.search).get('start')-0) - (document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0)));}else{document.getElementById('importnavprev').remove()};
       document.getElementById('audioImports').innerHTML = "Audio Imports";}
 document.getElementById('imp').src = ("https://cdn.indreams.me/" + importlist[0].imphash + "_9")
 document.getElementById('username').innerHTML = importlist[0].username
@@ -262,8 +260,9 @@ document.getElementById('importLimit').innerHTML = importlist[0].importLimit
 document.getElementById('importLimit').removeAttribute('style')
 document.getElementById('importTime').innerHTML = importlist[0].importTime
 document.getElementById('importTime').removeAttribute('style')
-document.getElementById('userID').innerHTML = importlist[0].userID
-document.getElementById('userID').removeAttribute('style')
+document.getElementById('userLevel').className = (document.getElementById('userLevel').className + ' persona-' + importlist[0].level[0].persona)
+document.getElementById('userLevel').innerHTML = importlist[0].level[0].level
+document.getElementById('userLevel').removeAttribute('style')
 document.getElementById('maxRequestsD').innerHTML = importlist[0].maxRequestsD
 document.getElementById('maxRequestsD').removeAttribute('style')
 document.getElementById('maxRequestsW').innerHTML = importlist[0].maxRequestsW
