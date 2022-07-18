@@ -245,8 +245,8 @@ if (ids.get('user')) {
     document.cookie = ("user=" + ids.get('user') + "; expires=Sun, 16 Jul 3567 06:23:41 GMT")
 }
 
-if (document.cookie.split('; ').find(row => row.startsWith('user='))) {
-(async()=>{const res=await fetch(`/assets/json/imports/user/` + document.cookie.split('; ').find(row => row.startsWith('user='))?.split('=')[1]);const json=await res.json();if(new URLSearchParams(window.location.search).get('json')) {customjson = new URLSearchParams(window.location.search).get('json');importlist = JSON.parse(customjson)}else{importlist=(json)};imports=new URLSearchParams(window.location.search).get('start') - 0
+if (document.cookie.split('; ').find(row => row.startsWith('user='))) {if('' + ids.get('commit') == 'null') {commitKey='main'}else{commitKey=ids.get('commit')}
+(async()=>{const res=await fetch(`https://raw.githubusercontent.com/Kee7702/DreamsUserDB/` + commitKey + `/assets/json/imports/user/` + document.cookie.split('; ').find(row => row.startsWith('user='))?.split('=')[1]);const json=await res.json();if(new URLSearchParams(window.location.search).get('json')) {customjson = new URLSearchParams(window.location.search).get('json');importlist = JSON.parse(customjson)}else{importlist=(json)};imports=new URLSearchParams(window.location.search).get('start') - 0
 document.getElementById('imp').onerror = function onerror(event) {
     this.src = 'https://assets.indreams.me/images/users/default.png'
 }
