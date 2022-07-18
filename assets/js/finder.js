@@ -252,9 +252,14 @@ document.getElementById('imp').onerror = function onerror(event) {
 if (importlist[(((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0)))+1]) {document.getElementById('importnavnext').href = ('/?start=' + ((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0)));}else{document.getElementById('importnavnext').remove()};
 if (importlist[(((new URLSearchParams(window.location.search).get('start')-0) - (document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0)))]) {document.getElementById('importnavprev').href = ('/?start=' + ((new URLSearchParams(window.location.search).get('start')-0) - (document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0)));}else{document.getElementById('importnavprev').remove()};
       document.getElementById('audioImports').innerHTML = "Audio Imports";}
+if (('' + importlist[1]) == 'undefined') {document.getElementById('audioClipsContainer').remove()}else{}
 if (('' + importlist[0].level) == 'undefined') {importlist[0].level = [{}]}else{}
+if (('' + importlist[0].username) == 'undefined') {importlist[0].username = 'Unknown'}else{}
+if (('' + importlist[0].pendingRequests) == 'undefined') {importlist[0].pendingRequests = '0'}else{}
 if (('' + importlist[0].level[0].persona) == 'undefined') {importlist[0].level[0].persona = 'unknown'}else{}
+if (('blank' + importlist[0].level[0].persona) == 'blank') {importlist[0].level[0].persona = 'unknown'}else{}
 if (('' + importlist[0].level[0].level) == 'undefined') {importlist[0].level[0].level = 0}else{}
+if (('' + importlist[0].importLimit) == 'undefined') {importlist[0].importLimit = 0}else{}
 document.getElementById('imp').src = ("https://cdn.indreams.me/" + importlist[0].imphash + "_9")
 document.getElementById('username').innerHTML = importlist[0].username
 document.getElementById('importCount').innerHTML = importlist.length-1
