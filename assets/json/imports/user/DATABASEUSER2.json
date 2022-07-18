@@ -2,6 +2,12 @@
   {
     "username": "DBTest2",
     "importLimit": "0",
+    "level": [
+      {
+        "persona": "",
+        "level": "0"
+      }
+    ],
     "pendingRequests": "0"
   }
 ]
