@@ -256,9 +256,9 @@ document.getElementById('imp').src = ("https://cdn.indreams.me/" + importlist[0]
 document.getElementById('username').innerHTML = importlist[0].username
 document.getElementById('importCount').innerHTML = importlist.length-1
 document.getElementById('importCount').removeAttribute('style')
-document.getElementById('importLimit').innerHTML = importlist[0].importLimit
+document.getElementById('importLimit').innerHTML = Math.floor(importlist[0].importLimit/60) + 'm ' + (importlist[0].importLimit % 60) + 's'
 document.getElementById('importLimit').removeAttribute('style')
-document.getElementById('importTime').innerHTML = importlist[0].importTime
+document.getElementById('importTime').innerHTML = Math.floor(importlist[0].importTime/60) + 'm ' + (importlist[0].importTime % 60) + 's'
 document.getElementById('importTime').removeAttribute('style')
 document.getElementById('userLevel').className = (document.getElementById('userLevel').className + ' persona-' + importlist[0].level[0].persona)
 document.getElementById('userLevel').innerHTML = importlist[0].level[0].level
