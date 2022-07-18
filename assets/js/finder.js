@@ -256,22 +256,22 @@ document.getElementById('imp').src = ("https://cdn.indreams.me/" + importlist[0]
 document.getElementById('username').innerHTML = importlist[0].username
 document.getElementById('importCount').innerHTML = importlist.length-1
 document.getElementById('importCount').removeAttribute('style')
-document.getElementById('importLimit').innerHTML = Math.floor(importlist[0].importLimit/60) + 'm ' + (importlist[0].importLimit % 60) + 's'
+document.getElementById('importLimit').innerHTML = Math.floor(((importlist[0].importLimit-0)+(((importlist.length-1)*10)-0))/60) + 'm ' + (((importlist[0].importLimit-0)+(((importlist.length-1)*10)-0)) % 60) + 's'
 document.getElementById('importLimit').removeAttribute('style')
-document.getElementById('importTime').innerHTML = Math.floor(importlist[0].importTime/60) + 'm ' + (importlist[0].importTime % 60) + 's'
+document.getElementById('importTime').innerHTML = Math.floor(((importlist.length-1)*10)/60) + 'm ' + (((importlist.length-1)*10) % 60) + 's'
 document.getElementById('importTime').removeAttribute('style')
 document.getElementById('userLevel').className = (document.getElementById('userLevel').className + ' persona-' + importlist[0].level[0].persona)
-document.getElementById('userLevel').innerHTML = importlist[0].level[0].level
+document.getElementById('userLevel').innerHTML = importlist[0].level[0].level + ' ' + (importlist[0].level[0].persona)[0].toUpperCase() + (importlist[0].level[0].persona).substring(1)
 document.getElementById('userLevel').removeAttribute('style')
-document.getElementById('maxRequestsD').innerHTML = importlist[0].maxRequestsD
+document.getElementById('maxRequestsD').innerHTML = Math.floor(((importlist.length-1)/10) *3) + 1
 document.getElementById('maxRequestsD').removeAttribute('style')
-document.getElementById('maxRequestsW').innerHTML = importlist[0].maxRequestsW
+document.getElementById('maxRequestsW').innerHTML = Math.floor(((importlist.length-1)/3) *3) + 3
 document.getElementById('maxRequestsW').removeAttribute('style')
-document.getElementById('maxRequestsM').innerHTML = importlist[0].maxRequestsM
+document.getElementById('maxRequestsM').innerHTML = Math.floor(((importlist.length-1)/3) *4) + 12
 document.getElementById('maxRequestsM').removeAttribute('style')
-document.getElementById('maxRequestsY').innerHTML = importlist[0].maxRequestsY
+document.getElementById('maxRequestsY').innerHTML = Math.floor((importlist.length-1)*7) + 35
 document.getElementById('maxRequestsY').removeAttribute('style')
-document.getElementById('pendingLimit').innerHTML = importlist[0].pendingLimit
+document.getElementById('pendingLimit').innerHTML = Math.floor((importlist.length-1)/2) + 1
 document.getElementById('pendingLimit').removeAttribute('style')
 document.getElementById('pendingRequests').innerHTML = importlist[0].pendingRequests
 document.getElementById('pendingRequests').removeAttribute('style')
