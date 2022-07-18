@@ -265,6 +265,7 @@ if (('' + importlist[0].level[0].level) == 'undefined') {importlist[0].level[0].
 if (('' + importlist[0].importLimit) == 'undefined') {importlist[0].importLimit = 0}else{}
 document.getElementById('imp').src = ("https://cdn.indreams.me/" + importlist[0].imphash + "_9")
 document.getElementById('username').innerHTML = importlist[0].username
+document.getElementById('username').href = '//indreams.me/' + importlist[0].username
 document.getElementById('importCount').innerHTML = importlist.length-1
 document.getElementById('importCount').removeAttribute('style')
 document.getElementById('importLimit').innerHTML = Math.floor(((importlist[0].importLimit-0)+(((importlist.length-1)*10)-0))/60) + 'm ' + (((importlist[0].importLimit-0)+(((importlist.length-1)*10)-0)) % 60) + 's'
