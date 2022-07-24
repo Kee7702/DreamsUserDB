@@ -39,7 +39,7 @@ do {imports++
       clipimg.style = (`height: 36px;width: 36px;position: absolute;background-image:url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_9'),url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_7');background-color:` + importlist[imports].img[0].color + `;background-size: cover;background-position: center;`);
       clipimg.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAALSURBVAgdY2BgAAAAAwABT0gKrwAAAABJRU5ErkJggg==';
       clipdesc.textContent = ("Completed on " + importlist[imports].import_date);
-      clipstatus.src = ('https://cdn.indreams.me/' + userdb[importlist[imports].userID].imphash + '_10';
+      clipstatus.src = ('https://cdn.indreams.me/' + userdb[importlist[imports].userID].imphash + '_10');
       clipstatus.style = 'height:20px;width:20px;line-height:20px;transform:scale(2)rotate(-5deg);';
       if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
       clipdiv.appendChild(clipname);
