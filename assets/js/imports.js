@@ -21,7 +21,7 @@ do {imports++
       clipname.style = "font-size:16px;line-height:20px;color:#ccc";
       clipname.className = "global-post-label";
       clipname.textContent = importlist[imports].import_name;
-      var clipstatus = document.createElement('a');
+      var clipstatus = document.createElement('img');
       clipstatus.className = "global-post-icon";
       clipstatus.textContent = "schedule"
       var clipdesc = document.createElement('a');
@@ -29,11 +29,17 @@ do {imports++
       var clipdiv = document.createElement('div');
       clipdiv.className = "global-annoucement";
       clipdiv.style = "background:#222";
-      if (importlist[imports].import_status == "0") {clipdesc.textContent = "Pending Completion";clipstatus.textContent = "schedule"}else{}
-      if (importlist[imports].import_status == "1") {if (importlist[imports].imgHash) {importlist[imports].img = [{"hash": importlist[imports].imgHash,"color": "#000000"}];importlist[imports].imgHash = null}clipname.style = "font-size:16px;line-height:20px;color:#ccc;margin-left:40px";clipdesc.style = "margin-left:40px";clipdiv.appendChild(clipimg);clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);clipname.rel = 'noreferrer noopener';clipname.target = '_blank';clipimg.style = (`height: 36px;width: 36px;position: absolute;background-image:url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_9'),url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_7');background-color:` + importlist[imports].img[0].color + `;background-size: cover;background-position: center;`);clipimg.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAALSURBVAgdY2BgAAAAAwABT0gKrwAAAABJRU5ErkJggg==';clipdesc.textContent = ("Completed on " + importlist[imports].import_date);clipstatus.textContent = "check"}else{}
-      if (importlist[imports].import_status == "2") {clipdesc.textContent = "Import Removed";clipstatus.textContent = "close"}else{}
-      if (importlist[imports].import_status == "3") {clipstatus.textContent = "campaign"}else{}
-      if (importlist[imports].import_status == "3" && importlist[imports].customHTML) {clipdesc.innerHTML = importlist[imports].customHTML}else{}
+      if (importlist[imports].imgHash) {importlist[imports].img = [{"hash": importlist[imports].imgHash,"color": "#000000"}];importlist[imports].imgHash = null}
+      clipname.style = "font-size:16px;line-height:20px;color:#ccc;margin-left:40px";
+      clipdesc.style = "margin-left:40px";
+      clipdiv.appendChild(clipimg);
+      clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);
+      clipname.rel = 'noreferrer noopener';
+      clipname.target = '_blank';
+      clipimg.style = (`height: 36px;width: 36px;position: absolute;background-image:url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_9'),url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_7');background-color:` + importlist[imports].img[0].color + `;background-size: cover;background-position: center;`);
+      clipimg.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAALSURBVAgdY2BgAAAAAwABT0gKrwAAAABJRU5ErkJggg==';
+      clipdesc.textContent = ("Completed on " + importlist[imports].import_date);
+      clipstatus.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAALSURBVAgdY2BgAAAAAwABT0gKrwAAAABJRU5ErkJggg==';
       if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
       clipdiv.appendChild(clipname);
       clipdiv.appendChild(clipstatus);
