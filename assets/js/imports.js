@@ -40,6 +40,7 @@ do {imports++
       clipimg.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAALSURBVAgdY2BgAAAAAwABT0gKrwAAAABJRU5ErkJggg==';
       clipdesc.textContent = ("Completed on " + importlist[imports].import_date);
       clipstatus.src = ('https://cdn.indreams.me/' + userdb[importlist[imports].userID].imphash + '_10');
+      clipstatus.onerror = function onerror(event) {this.src = 'https://assets.indreams.me/images/users/default.png'};
       clipstatus.style = 'height:20px;width:20px;line-height:20px;transform:scale(2)rotate(-5deg);';
       if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
       clipdiv.appendChild(clipname);
