@@ -57,6 +57,7 @@ while(importlist[imports+1] && (document.cookie.split('; ').find(row => row.star
 if (new URLSearchParams(window.location.search).get('id')) {
 if (document.getElementById('importnavnext')){document.getElementById('importnavnext').remove()};
 if (document.getElementById('importnavprev')){document.getElementById('importnavprev').remove()};
+document.getElementsByClassName('navigation-container')[0].children[1].href = '/imports'
 do {imports++
    importicon = null
    var importaudio = null;
@@ -79,22 +80,16 @@ if(importlist[imports].creation_id == new URLSearchParams(window.location.search
       clipdiv.className = "global-annoucement";
       clipdiv.style = "background:#222";
       if (importlist[imports].imgHash) {importlist[imports].img = [{"hash": importlist[imports].imgHash,"color": "#000000"}];importlist[imports].imgHash = null}
-      clipname.style = "font-size:16px;line-height:20px;color:#ccc;margin-left:40px";
+      clipname.style = "font-size:16px;line-height:20px;color:#ccc;padding:0 10px 10px 0;background:#222;border-radius:0 0 10px 0";
       clipdesc.style = "margin-left:40px";
-      clipdiv.appendChild(clipimg);
       clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);
       clipname.rel = 'noreferrer noopener';
       clipname.target = '_blank';
-      clipimg.style = (`height: 36px;width: 36px;position: absolute;background-image:url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_9'),url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_7');background-color:` + importlist[imports].img[0].color + `;background-size: cover;background-position: center;`);
+      clipimg.style = (`aspect-ratio:16/9;width:-webkit-fill-available;background-image:url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_11'),url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_7');background-color:` + importlist[imports].img[0].color + `;background-size: cover;background-position: center;`);
       clipimg.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAALSURBVAgdY2BgAAAAAwABT0gKrwAAAABJRU5ErkJggg==';
-      clipdesc.textContent = ("Completed on " + importlist[imports].import_date);
-      clipstatus.src = ('https://cdn.indreams.me/' + userdb[importlist[imports].userID].imphash + '_10');
-      clipstatus.onerror = function onerror(event) {this.src = 'https://assets.indreams.me/images/users/default.png'};
-      clipstatus.style = 'height:20px;width:20px;line-height:20px;transform:scale(2)rotate(-5deg);';
-      if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
       clipdiv.appendChild(clipname);
-      clipdiv.appendChild(clipstatus);
-      clipdiv.appendChild(clipdesc);
+      clipdiv.appendChild(clipimg);
+      if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
       if (importlist[imports].uploaded) {var importaudio = new Audio;
       importaudio.style = 'width: -webkit-fill-available;height: 20px;margin: 0;display: block;margin-top: 6px';
       importaudio.controls = true;
