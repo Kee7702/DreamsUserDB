@@ -24,7 +24,6 @@ do {imports++
       clipname.textContent = importlist[imports].import_name;
       var clipstatus = document.createElement('img');
       clipstatus.className = "global-post-icon";
-      clipstatus.textContent = "schedule"
       var clipdesc = document.createElement('a');
       clipdesc.className = "global-post-details";
       var clipdiv = document.createElement('div');
@@ -72,8 +71,6 @@ if(importlist[imports].creation_id == new URLSearchParams(window.location.search
       clipname.className = "global-post-label";
       clipname.textContent = importlist[imports].import_name;
       var clipstatus = document.createElement('img');
-      clipstatus.className = "global-post-icon";
-      clipstatus.textContent = "schedule"
       var clipdesc = document.createElement('a');
       clipdesc.className = "global-post-details";
       var clipdiv = document.createElement('div');
