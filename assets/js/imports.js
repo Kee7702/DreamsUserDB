@@ -1,7 +1,7 @@
 if (!document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]) {if(new URLSearchParams(window.location.search).get('limit')){document.cookie = ("limit=" + new URLSearchParams(window.location.search).get('limit') + "; expires=Sun, 16 Jul 3567 06:23:41 GMT")}else{document.cookie = "limit=10; expires=Sun, 16 Jul 3567 06:23:41 GMT"}}else{}
 if(new URLSearchParams(window.location.search).get('limit')){document.cookie = ("limit=" + new URLSearchParams(window.location.search).get('limit') + "; expires=Sun, 16 Jul 3567 06:23:41 GMT")}else{}
 
-(async()=>{const res=await fetch(`/assets/json/imports/data`);const json=await res.json();importlist=(json);imports=new URLSearchParams(window.location.search).get('start') -1;(async()=>{const res=await fetch(`https://raw.githubusercontent.com/Kee7702/DreamsUserDB/main/assets/json/users`);const json=await res.json();userdb=(json);
+(async()=>{const res=await fetch(`https://raw.githubusercontent.com/Kee7702/DreamsUserDB/database/imports`);const json=await res.json();importlist=(json);imports=new URLSearchParams(window.location.search).get('start') -1;(async()=>{const res=await fetch(`https://raw.githubusercontent.com/Kee7702/DreamsUserDB/database/users`);const json=await res.json();userdb=(json);
 
                  if(importlist) {
 if (importlist[(((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0)))]) {document.getElementById('importnavnext').href = '/imports?start=' + ((document.cookie.split('; ').find(row => row.startsWith('limit='))?.split('=')[1]-0) + (new URLSearchParams(window.location.search).get('start')-0));}else{document.getElementById('importnavnext').remove()};
