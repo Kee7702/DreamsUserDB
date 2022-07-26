@@ -80,13 +80,17 @@ if(importlist[imports].creation_id == new URLSearchParams(window.location.search
       clipdiv.className = "global-annoucement";
       clipdiv.style = "background:#222";
       if (importlist[imports].imgHash) {importlist[imports].img = [{"hash": importlist[imports].imgHash,"color": "#000000"}];importlist[imports].imgHash = null}
-      clipname.style = "font-size:16px;line-height:20px;color:#ccc;padding:0 10px 10px 0;background:#222;border-radius:0 0 10px 0";
+      clipname.style = "font-size:16px;line-height:20px;color:#ccc;padding:0 10px 10px 24px;background:#222;border-radius:0 0 10px 0";
       clipdesc.style = "margin-left:40px";
       clipname.href = ("https://indreams.me/element/" + importlist[imports].creation_id);
       clipname.rel = 'noreferrer noopener';
       clipname.target = '_blank';
       clipimg.style = (`aspect-ratio:16/9;width:-webkit-fill-available;background-image:url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_11'),url('https://cdn.indreams.me/` + importlist[imports].img[0].hash + `_7');background-color:` + importlist[imports].img[0].color + `;background-size: cover;background-position: center;`);
       clipimg.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAALSURBVAgdY2BgAAAAAwABT0gKrwAAAABJRU5ErkJggg==';
+      clipstatus.src = ('https://cdn.indreams.me/' + userdb[importlist[imports].userID].imphash + '_10');
+      clipstatus.onerror = function onerror(event) {this.src = 'https://assets.indreams.me/images/users/default.png'};
+      clipstatus.style = 'height:20px;width:20px;line-height:20px;transform:scale(2)rotate(-5deg);position:absolute;z-index:1';
+      clipdiv.appendChild(clipstatus);
       clipdiv.appendChild(clipname);
       clipdiv.appendChild(clipimg);
       if (importlist[imports].import_iconoverride) {clipstatus.textContent = importlist[imports].import_iconoverride}else{}
