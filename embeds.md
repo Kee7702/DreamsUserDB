@@ -4,9 +4,9 @@
 #### At this time this is all the embed script can do, but there are future planned implementations.
 ### Parameters
 #### Name
-Required, is the exact name of the import you wish to embed. It's exactly the same as the way `/imports` works so you can just copy the value from there.
+#### Required, is the exact name of the import you wish to embed. It's exactly the same as the way `/imports` works so you can just copy the value from there.
 #### CSS
-An early version of this has been added, though right now it is totally bare and requires specific element ids or classes to edit.
-Soon, a full list of variables will be added.
+#### An early version of this has been added, though right now it is totally bare and requires specific element ids or classes to edit.
+#### Soon, a full list of variables will be added.
 #### Player
-Defauls to full player, can be set to `thin` which is a 10:3 version of the normal 16:9 embed
+#### Defauls to full player, can be set to `thin` which is a 10:3 version of the normal 16:9 embed
