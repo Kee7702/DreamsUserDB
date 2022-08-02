@@ -14,3 +14,4 @@
 #### Soon, a full list of variables will be added.
 #### Player
 #### Defauls to full player, can be set to `thin` which is a 10:3 version of the normal 16:9 embed
+If you visit the page outside of an iframe, it will automatically redirect you to this page or to the appropriate import name at `/imports`. This is to help people make it to the correct page if they are lost or confused about how it works. If you need further help you can feel free to contact me through PSN.
