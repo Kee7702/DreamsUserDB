@@ -5,7 +5,6 @@
 <iframe src="/embed?name=LittleBigPlanet%202%20Move%20Pack%20-%20move_main_2&amp;css=a.global-post-label%7Bbackground:%23333!important%7D.plyr--audio%20.plyr__controls%7Bpadding:8px!important%7D.plyr--audio%7Bmargin-top:-36px!important%7D" class="userdbembed"></iframe>
 <iframe src="/embed?player=thin&amp;name=LittleBigPlanet%202%20-%20The%20Pod&amp;css=a.global-post-label%7Bbackground:%23333!important%7D.plyr--audio%20.plyr__controls%7Bpadding:8px!important%7D.plyr--audio%7Bmargin-top:-36px!important%7D" class="userdbembed" style="aspect-ratio:10/3"></iframe>
 <iframe src="/embed?player=thin&amp;name=LittleBigPlanet%203%20Alpha%20-%20The%20Pod&amp;css=a.global-post-label%7Bbackground:%23333!important%7D.plyr--audio%20.plyr__controls%7Bpadding:8px!important%7D.plyr--audio%7Bmargin-top:-36px!important%7D" class="userdbembed" style="aspect-ratio:10/3"></iframe>
-#### At this time this is all the embed script can do, but there are future planned implementations.
 ### Parameters
 #### Name
 #### Required, is the exact name of the import you wish to embed. It's exactly the same as the way `/imports` works so you can just copy the value from there.
