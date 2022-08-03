@@ -6,7 +6,7 @@
 <iframe src="/embed?name=LittleBigPlanet%20-%20The%20Pod&amp;css=a.global-post-label%7Bbackground:%23333!important%7D.plyr--audio%20.plyr__controls%7Bpadding:8px!important%7D" class="userdbembed"></iframe>
 <iframe src="/embed?name=LittleBigPlanet%202%20-%20The%20Pod&amp;css=a.global-post-label%7Bbackground:%23333!important%7D.plyr--audio%20.plyr__controls%7Bpadding:8px!important%7D" class="userdbembed"></iframe>
 <iframe src="/embed?name=LittleBigPlanet%203%20Alpha%20-%20The%20Pod&amp;css=a.global-post-label%7Bbackground:%23333!important%7D.plyr--audio%20.plyr__controls%7Bpadding:8px!important%7D" class="userdbembed"></iframe>
-<iframe src="/embed?name=LittleBigPlanet%202%20Move%20Pack%20-%20move_main_2&amp;css=a.global-post-label%7Bbackground:%23333!important%7D.plyr--audio%20.plyr__controls%7Bpadding:8px!important%7D" class="userdbembed" style="resize: both;width: 684px;max-width: 684px;min-width: 300px;height: 120px;max-height: 684px;min-height: 34px;"></iframe>
+<iframe src="/embed?name=LittleBigPlanet%202%20Move%20Pack%20-%20move_main_2&amp;css=a.global-post-label%7Bbackground:%23333!important%7D.plyr--audio%20.plyr__controls%7Bpadding:8px!important%7D" class="userdbembed" style="resize: both;width: 684px;max-width: 684px;min-width: 300px;height: 120px;max-height: 684px;min-height: 72px;"></iframe>
 
 ## Parameters
 #### Name
@@ -16,6 +16,3 @@
 ##### Soon, a full list of variables will be added.
 #### NoHREF
 ##### Disables automatic href redirection when visiting the page outside of an iframe
-##### If you visit the page outside of an iframe without specifying **NoHREF**, it will automatically redirect you to this page or to the appropriate import name at `/imports`. This is to help people make it to the correct page if they are lost or confused about how it works. If you need further help you can feel free to contact me through PSN.
-## Helpful Styling
-##### If you have any form of padding, for the best experience make sure to not have as much padding on the bottom. This is to help make sure the player portion of the embed isn't cut off, but padding is recommended or CSS modifications are recommended to make the embed look better than it otherwise would.
