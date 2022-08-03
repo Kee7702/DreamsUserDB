@@ -1,3 +1,4 @@
+## Embed Documentation
 # Embed the database into a custom webpage!
 #### The ability to embed imports is available at `/embed` which will allow you to specify an exact import name to embed.
 <style>iframe.userdbembed {margin-top:4px;border:none;width:calc(50% - 21px);aspect-ratio: 16/9;box-shadow:black 0px 3px 4px 0px;border-radius: 16px;padding: 8px 8px 0;background: #333;display:inline-block}iframe.userdbembed:nth-child(even){margin-left:4px}</style>
