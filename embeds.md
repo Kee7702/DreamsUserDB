@@ -6,7 +6,7 @@
 
 ## Parameters
 #### ID
-##### Required. The ID of an import is a data-driven string of text which is 32 characters in length, created using factors such as the import name, indreams creaton id, and indreams image hash. This combination makes it nearly impossible for identical ids, and also provides a permalink as those factors will almost never change. However, due to how the id is generated, it is impossible to redirect outdated hashes, due to the fact that hashes aren't stored and are generated client-side.
+##### Required. The ID of an import is a data-driven string of text which is 32 characters in length, created using factors such as the import name, indreams creation id, and indreams image hash. This combination makes it nearly impossible for identical ids, and also provides a permalink as those factors will almost never change. However, due to how the id is generated, it is impossible to redirect outdated hashes, due to the fact that hashes aren't stored and are generated client-side.
 #### CSS
 ##### An early version of this has been added, though right now it is totally bare and requires specific element ids or classes to edit.
 ##### Soon, a full list of variables will be added.
