@@ -1,6 +1,17 @@
 [
   {
     "userID": "10",
+    "import_name": "Automation Test",
+    "creation_id": "none",
+    "img": [
+      {
+        "hash": "52b7d5cfd294eb16d10ae91e674640fd",
+        "color": "#000000"
+      }
+    ]
+  },
+  {
+    "userID": "10",
     "source": "1SJsjUNJlXOvnYTfZQcDgRHBYJrBRnWht",
     "import_name": "PS3 - Game Boot Sound",
     "import_date": "2022-08-15T01:22:28.592Z",
