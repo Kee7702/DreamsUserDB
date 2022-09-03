@@ -1,12 +1,1 @@
-[
-  {
-    "level": [
-      {
-        "persona": "artist",
-        "level": "31"
-      }
-    ],
-    "username": "stretchster",
-    "imphash": "21ba1da0fb70d74d145b5b831e7e2801"
-  }
-]
+[{"level":[{"persona":"artist","level":"31"}],"username":"stretchster","imphash":"21ba1da0fb70d74d145b5b831e7e2801"}]
