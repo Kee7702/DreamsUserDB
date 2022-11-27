@@ -11,8 +11,6 @@
 
 ## Data Endpoint
 #### Going away soon™
----
 | Imports | Users | User IDs | User Stats |
----
+| --- | --- | --- | --- |
 | /data/i/list.json | /data/u/list.json | /data/u/ids.json | /data/u/#userid#.json |
----
