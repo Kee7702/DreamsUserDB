@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: audio
-          path: /audio
+          path: audio
           clean: false
       - run: rm -rf audio/.git
       - name: Upload artifact
