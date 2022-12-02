@@ -63,7 +63,9 @@ jobs:
       - run: rm -rf audio/.git
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-
+        with:
+          # Upload entire repository
+          path: '.'
   # Deployment job
   upload:
     environment:
