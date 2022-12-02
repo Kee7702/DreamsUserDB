@@ -63,6 +63,9 @@ jobs:
           clean: false
       - name: Setup Pages
         uses: actions/configure-pages@v2
+        with:
+          ref: audio
+          path: audio
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
