@@ -27,6 +27,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: audio
+          path: audio
+          clean: false
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
@@ -34,6 +40,7 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - run: rm -rf audio/.git
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
