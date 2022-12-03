@@ -1,13 +1,16 @@
 [
- {
-  "level": [
-   {
-    "persona": "artist",
-    "level": "349"
-   }
-  ]
- },
- {
-  "import_name": "Sonic Mania - Egg Reverie Pinch"
- }
+  {
+    "level": [
+      {
+        "persona": "artist",
+        "level": "349"
+      }
+    ]
+  },
+  {
+    "import_name": "Sonic Mania - Egg Reverie Pinch",
+    "img": [
+      {}
+    ]
+  }
 ]
