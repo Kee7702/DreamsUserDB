@@ -39,7 +39,7 @@ jobs:
           source: ./
           destination: ./_site
       - run: rm -rf audio/.git
-      - run: rm -r *.md
+      - run: git rm -r *.md
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
