@@ -1,7 +1,7 @@
 ## Embed Documentation
 # Embed the database into a custom webpage!
 #### The ability to embed imports is available at `/embed` which will allow you to specify an exact import name to embed.
-<style>iframe.userdbembed {margin-top:4px;border:none;width:calc(50% - 4px);aspect-ratio:16/9;box-shadow:black 0 3px 4px 0;border-radius:10px;display:inline-block}iframe.userdbembed:nth-child(even){margin-left:8px}</style>
+<style>iframe.userdbembed {margin-top:4px;border:none;width:calc(50% - 6px);aspect-ratio:16/9;box-shadow:black 0 3px 4px 0;border-radius:10px;display:inline-block}iframe.userdbembed:nth-child(even){margin-left:8px}</style>
 <div>
   <iframe src="/embed?id=lbp2-move_main_2" class="userdbembed"></iframe>
   <iframe src="/embed?id=lbp3-pod" class="userdbembed"></iframe>
