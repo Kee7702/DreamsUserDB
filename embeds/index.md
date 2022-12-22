@@ -20,4 +20,7 @@
 
 ## About legacy IDs
 ##### Now that ids are all namespaced, they will never be changed, however this also means that any old ids were made originally made invalid after this change. Old ids were generated using a combination of the import title, the creation id, the image hash, and a few more key elements. These were all thrown into an algorithm that generated a unique token that would for certain never show on any other import. Old ids can still be used, though they've lost some of their original information; I'm hoping this won't affect anything though.
-##### The issue of the old token system is very obvious when you consider that one of the elements required in generating the ID can change very easily, entirely breaking the id.
+##### Even though support for legacy ids has been added back, certain imports have at least 1 element changed since they were added to the database. This very issue is why I moved away from the legacy id system and instead moved to namespaced ids.
+
+## Using the import name instead of an ID
+##### As a part of the legacy query update, the name parameter is also back. What you do for this parameter is to literally copy the exact name of imports.
