@@ -19,5 +19,5 @@
 ##### An option, true/false(default) to change the embed (and in connection the entire website) to an experimental light mode. This is currently done using inverting rather than changing colors, so custom colors set in CSS will be inverted.
 
 ## About legacy IDs
-##### Now that ids are all namespaced, they will never be changed, however this also means that any old ids were made invalid. Old ids were generated using a combination of the import title, the creation id, the image hash, and a few more key elements. These were all thrown into an algorithm that generated a unique token that would for certain never show on any other import.
+##### Now that ids are all namespaced, they will never be changed, however this also means that any old ids were made originally made invalid after this change. Old ids were generated using a combination of the import title, the creation id, the image hash, and a few more key elements. These were all thrown into an algorithm that generated a unique token that would for certain never show on any other import. Old ids can still be used, though they've lost some of their original information; I'm hoping this won't affect anything though.
 ##### The issue of the old token system is very obvious when you consider that one of the elements required in generating the ID can change very easily, entirely breaking the id.
