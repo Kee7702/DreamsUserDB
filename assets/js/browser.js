@@ -54,7 +54,7 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
                         hash: importlist[imports].imgHash,
                         color: "#000000"
                     }],
-                    b.style = `background:${importlist[imports].img[0].color};margin-top:8px`,
+                    b.style = "background:"+importlist[imports].img[0].color+";margin-top:8px",
                     importlist[imports].imgHash = null),
                     c.style = "font-size:16px;line-height:20px;color:#ccc;padding:0 10px 10px 24px;background:#000;border-radius:0 0 10px 0;z-index:1",
                     a.style = "font-size: 16px;line-height: 20px;color: rgb(204, 204, 204);position: absolute;margin-top: 310px;padding: 10px 10px;background: #000;border-radius: 0 10px 0 0",
