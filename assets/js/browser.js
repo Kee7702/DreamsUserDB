@@ -14,7 +14,7 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
             document.getElementById("audioImports").innerHTML = "Audio Imports";
             do {
                 imports++,
-                document.getElementById("audioClips").innerHTML += `<div style="margin:4px;padding:10px;display:inline-grid;text-align:center;background:${importlist[imports].img[0].color||'#333'};border-radius:10px;max-width:calc(100% - 28px);width:480px;height:120px;">
+                document.getElementById("audioClips").innerHTML += `<div style="margin:4px;padding:10px;display:inline-grid;text-align:center;background:${importlist[imports].img[0].color || '#333'};border-radius:10px;max-width:calc(100% - 28px);width:480px;height:120px;">
   ${Object.keys(importlist[imports].img[0]).length == 2 && '<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAALSURBVAgdY2BgAAAAAwABT0gKrwAAAABJRU5ErkJggg==" style="transform:scale(1.10345);height:50px;width:50px;position: absolute;background-image:url(&quot;/assets/images/cardOverlay.png&quot;), url(&quot;https://cdn-prod.puprod.indreams.me/' + importlist[imports].img[0].hash + '_2&quot;), url(&quot;https://cdn-prod.puprod.indreams.me/' + importlist[imports].img[0].hash + '_7&quot;);-webkit-mask-image:url(&quot;/assets/images/cardMaskImage.png&quot;);-webkit-mask-size:cover;border-radius:50%;background-color:' + importlist[imports].img[0].color + ';background-size:cover;background-position:centercenter;">' || ''}
   <a class="global-post-label"${importlist[imports].browse_id && ' href="/imports?id=' + importlist[imports].browse_id + '"'} style="font-size:16px;line-height:27px;color:#CCC ${importlist[imports].import_date && ';margin-left:54px'};margin-top:18px;font-family:Poppins;">${importlist[imports].import_name}</a>
   <img class="global-post-icon" src="https://cdn-prod.puprod.indreams.me/${userdb[importlist[imports].userID].imphash}_10" onerror="this.src='https://assets.indreams.me/images/users/default.png'" title="${userdb[importlist[imports].userID].username}" style="height: 20px; width: 20px; line-height: 20px; transform: scale(2) rotate(-5deg);">
@@ -33,7 +33,7 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
                 importicon = null;
                 var f = null
                   , d = null;
-                if (importlist[imports].browse_id == params.get("id") || importlist[imports].import_name == params.get("name") || ((parseInt(importlist[imports].import_name.replaceAll(' ', ''), 36)) + parseInt(importlist[imports].creation_id.split('/')[importlist[imports].creation_id.split('/').length - 1], 36)).toString(16).slice(0, 15) + importlist[imports].img[0].hash.slice(0, 5) == ('' + params.get("id")).slice(0, 20)) {
+                if (importlist[imports].browse_id == params.get("id") || importlist[imports].import_name == params.get("name")) {
                     var d = document.createElement("img");
                     d.style = "height:36px;width:36px;position:absolute",
                     d.onerror = function(a) {
@@ -86,7 +86,7 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
                     document.getElementById("audioClips").appendChild(b)
                 }
                 importlist[imports + 1] || "" != document.getElementById("audioClips").innerHTML || (document.getElementById("audioClips").innerHTML = '<div class="global-post-container" style="background:#333;margin-top:8px"><a>404 Not Found<br>An import with the specified ID' + decodeURI(" %27" + params.get("id") + "%27 ") + "was not found in the database.</a></div>")
-            } while (importlist[imports + 1] && importlist[imports].browse_id !== params.get("id") && importlist[imports].import_name !== params.get("name") && ((parseInt(importlist[imports].import_name.replaceAll(' ', ''), 36)) + parseInt(importlist[imports].creation_id.split('/')[importlist[imports].creation_id.split('/').length - 1], 36)).toString(16).slice(0, 15) + importlist[imports].img[0].hash.slice(0, 5) !== ('' + params.get("id")).slice(0, 20))
+            } while (importlist[imports + 1] && importlist[imports].browse_id !== params.get("id") && importlist[imports].import_name !== params.get("name"))
         }
     }
     )()
