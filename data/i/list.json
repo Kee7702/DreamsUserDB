@@ -1,5 +1,15 @@
 [
   {
+    "userID": "10",
+    "source": "Minecraft/Minecraft - Dog",
+    "import_name": "Minecraft - Dog",
+    "img": [
+      {
+        "color": "#244a4e"
+      }
+    ]
+  },
+  {
     "userID": "16",
     "source": "My Singing Monsters/My Singing Monsters - Bone Island",
     "import_name": "My Singing Monsters - Bone Island",
