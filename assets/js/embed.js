@@ -28,18 +28,18 @@ const params = new URLSearchParams(window.location.search);
                 var e = document.createElement("img")
                   , c = document.createElement("div");
                 if (c.className = "global-post-container",
-                c.style = "background:var(--embed-bg,#000)",
+                c.style = "background:var(--embed-bg,"+(importlist[imports].img[0].color || '#333')+")",
                 importlist[imports].imgHash && (importlist[imports].img = [{
                     hash: importlist[imports].imgHash,
-                    color: "var(--embed-bg,#000)"
+                    color: "var(--embed-bg,#333)"
                 }],
                 importlist[imports].imgHash = null),
-                b.style = "white-space:nowrap;font-size:14px;line-height:20px;color:var(--embed-color,#ccc)!important;padding:0 10px 10px 24px;background:var(--embed-bg,#000);border-radius:0 0 10px 0;z-index:1",
+                b.style = "white-space:nowrap;font-size:14px;line-height:20px;color:var(--embed-color,#ccc)!important;padding:0 10px 10px 24px;background:var(--embed-bg,"+(importlist[imports].img[0].color || '#333')+");border-radius:0 0 10px 0;z-index:1",
                 (importlist[imports].creation_id&&(b.href = "https://indreams.me/" + importlist[imports].creation_id)),
                 b.rel = "noreferrer noopener",
                 b.target = "_blank",
                 a.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC",
-                a.style = "height:100%;max-height:inherit;width:100%;background-image:url('https://cdn-prod.puprod.indreams.me/" + (importlist[imports].img[0].hash || '52b7d5cfd294eb16d10ae91e674640fd') + "_11'),url('https://cdn-prod.puprod.indreams.me/" + (importlist[imports].img[0].hash || '52b7d5cfd294eb16d10ae91e674640fd') + "_7');background-color:" + (importlist[imports].img[0].color || '#333') + ";background-size: cover;background-position: center;",
+                a.style = "height:100%;max-height:inherit;width:100%;background-image:url('https://cdn-prod.puprod.indreams.me/" + (importlist[imports].img[0].hash || '52b7d5cfd294eb16d10ae91e674640fd') + "_11'),url('https://cdn-prod.puprod.indreams.me/" + (importlist[imports].img[0].hash || '52b7d5cfd294eb16d10ae91e674640fd') + "_7');background-color:" + (importlist[imports].img[0].color || '#333') + ";background-size: cover;background-position:center;border-radius:10px",
                 e.src = 'https://cdn-prod.puprod.indreams.me/' + userdb[importlist[imports].userID].imphash + "_10",
                 e.onerror = function(a) {
                     this.src = "https://assets.indreams.me/images/users/default.png"
@@ -50,9 +50,10 @@ const params = new URLSearchParams(window.location.search);
                 c.appendChild(b),
                 c.appendChild(a),
                 importlist[imports].import_iconoverride && (e.textContent = importlist[imports].import_iconoverride),
+                document.body.style.background=document.body.style.background.replace('#000',(importlist[imports].img[0].color || '#333')),
                 importlist[imports].source) {
                     var e = document.createElement('div');
-                    e.style = "padding:10px;background:var(--embed-bg,#000);position:absolute;width:100%";
+                    e.style = "padding:10px;background:var(--embed-bg,"+(importlist[imports].img[0].color || '#333')+");position:absolute;width:100%";
                     var d = new Audio;
                     d.style = "width:calc(100% - 20px);border-radius:10px",
                     d.controls = !0,
@@ -62,7 +63,7 @@ const params = new URLSearchParams(window.location.search);
                     c.appendChild(e)
                 } else if (importlist[imports].sound_id) {
                     var e = document.createElement('div');
-                    e.style = "padding:10px;background:var(--embed-bg,#000);position:absolute;width:100%";
+                    e.style = "padding:10px;background:var(--embed-bg,"+(importlist[imports].img[0].color || '#333')+");position:absolute;width:100%";
                     var d = new Audio;
                     d.style = "width:calc(100% - 20px);border-radius:10px",
                     d.controls = !0,
@@ -72,7 +73,7 @@ const params = new URLSearchParams(window.location.search);
                     c.appendChild(e)
                 }
                 document.getElementById("audioClips").appendChild(c),
-                document.querySelector('audio').parentElement.style = "margin:-10px;width:100%;margin-top:" + (-10 - document.querySelector('audio').offsetHeight) + "px;padding:10px;background:var(--embed-bg,#000);position:absolute",
+                document.querySelector('audio').parentElement.style = "margin:-10px;width:100%;margin-top:" + (-10 - document.querySelector('audio').offsetHeight) + "px;padding:10px;background:var(--embed-bg,"+(importlist[imports].img[0].color || '#333')+");position:absolute",
                 Array.from(document.getElementsByTagName("audio")).map(a=>a.addEventListener('error', function() {
                     this.cachedTime = this.currentTime;
                     this.src = this.src;
