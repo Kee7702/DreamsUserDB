@@ -15,12 +15,11 @@
 #### CSS
 ##### An early version of this has been added, though right now it is totally bare and requires specific element ids or classes to edit.
 ##### Soon, a full list of variables will be added.
-#### experiment_light
-##### An option, true/false(default) to change the embed (and in connection the entire website) to an experimental light mode. This is currently done using inverting rather than changing colors, so custom colors set in CSS will be inverted.
 
 ## About legacy IDs
 ##### Now that ids are all namespaced, they will never be changed, however this also means that any old ids were made originally made invalid after this change. Old ids were generated using a combination of the import title, the creation id, the image hash, and a few more key elements. These were all thrown into an algorithm that generated a unique token that would for certain never show on any other import. Old ids can still be used, though they've lost some of their original information; I'm hoping this won't affect anything though.
 ##### Even though support for legacy ids has been added back, certain imports have at least 1 element changed since they were added to the database. This very issue is why I moved away from the legacy id system and instead moved to namespaced ids.
+#### As of May 25th, 2023, legacy IDs are no longer supported. Some traces of them may remain in the code, however it shoud be impossible to use them to browse the import database.
 
 ## Using the import name instead of an ID
 ##### As a part of the legacy query update, the name parameter is also back. What you do for this parameter is to literally copy the exact name of imports.
