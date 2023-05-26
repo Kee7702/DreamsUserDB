@@ -14,7 +14,7 @@ const params = new URLSearchParams(window.location.search);
             importicon = null;
             var d = null
               , a = null;
-            if (importlist[imports].browse_id == params.get("id") || importlist[imports].import_name == params.get("name")) {
+            if (importlist[imports].browse_id && importlist[imports].browse_id == params.get("id") || importlist[imports].import_name && importlist[imports].import_name == params.get("name")) {
                 var a = document.createElement("img");
                 a.style = "height:36px;width:36px;position:absolute",
                 a.onerror = function(a) {
@@ -35,12 +35,12 @@ const params = new URLSearchParams(window.location.search);
                 }],
                 importlist[imports].imgHash = null),
                 b.style = "white-space:nowrap;font-size:14px;line-height:20px;color:var(--embed-color,#ccc)!important;padding:0 10px 10px 24px;background:var(--embed-bg,#000);border-radius:0 0 10px 0;z-index:1",
-                b.href = "https://indreams.me/" + importlist[imports].creation_id,
+                (importlist[imports].creation_id&&(b.href = "https://indreams.me/" + importlist[imports].creation_id)),
                 b.rel = "noreferrer noopener",
                 b.target = "_blank",
                 a.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC",
-                a.style = "height:100%;max-height:inherit;width:100%;background-image:url('https://cdn-prod.puprod.indreams.me/" + importlist[imports].img[0].hash + "_11'),url('https://cdn-prod.puprod.indreams.me/" + importlist[imports].img[0].hash + "_7');background-color:" + importlist[imports].img[0].color + ";background-size: cover;background-position: center;",
-                e.src = (userdb[importlist[imports].userID].impstored ? '/data/imp/' : ('https://cdn-prod.puprod.indreams.me/')) + userdb[importlist[imports].userID].imphash + "_10",
+                a.style = "height:100%;max-height:inherit;width:100%;background-image:url('https://cdn-prod.puprod.indreams.me/" + (importlist[imports].img[0].hash || '52b7d5cfd294eb16d10ae91e674640fd') + "_11'),url('https://cdn-prod.puprod.indreams.me/" + (importlist[imports].img[0].hash || '52b7d5cfd294eb16d10ae91e674640fd') + "_7');background-color:" + (importlist[imports].img[0].color || '#333') + ";background-size: cover;background-position: center;",
+                e.src = 'https://cdn-prod.puprod.indreams.me/' + userdb[importlist[imports].userID].imphash + "_10",
                 e.onerror = function(a) {
                     this.src = "https://assets.indreams.me/images/users/default.png"
                 }
