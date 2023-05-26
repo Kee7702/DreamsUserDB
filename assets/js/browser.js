@@ -16,10 +16,10 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
                 imports++,
                 document.getElementById("audioClips").innerHTML += `<div style="margin:4px;padding:10px;display:inline-grid;text-align:center;background:${importlist[imports].img[0].color || '#333'};border-radius:10px;max-width:calc(100% - 28px);width:480px;height:120px;">
   ${Object.keys(importlist[imports].img[0]).length == 2 && '<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAALSURBVAgdY2BgAAAAAwABT0gKrwAAAABJRU5ErkJggg==" style="transform:scale(1.10345);height:50px;width:50px;position: absolute;background-image:url(&quot;/assets/images/cardOverlay.png&quot;), url(&quot;https://cdn-prod.puprod.indreams.me/' + importlist[imports].img[0].hash + '_2&quot;), url(&quot;https://cdn-prod.puprod.indreams.me/' + importlist[imports].img[0].hash + '_7&quot;);-webkit-mask-image:url(&quot;/assets/images/cardMaskImage.png&quot;);-webkit-mask-size:cover;border-radius:50%;background-color:' + importlist[imports].img[0].color + ';background-size:cover;background-position:centercenter;">' || ''}
-  <a class="global-post-label"${importlist[imports].browse_id && importlist[imports].creation_id && ' href="/imports?id=' + importlist[imports].browse_id + '"'} style="font-size:16px;line-height:27px;color:#ccc${importlist[imports].import_date && ';margin-left:54px' || ''};margin-top:18px;font-family:Poppins;">${importlist[imports].import_name}</a>
+  <a class="global-post-label"${importlist[imports].browse_id && importlist[imports].creation_id && ' href="/imports?id=' + importlist[imports].browse_id + '"'} style="font-size:16px;line-height:27px;color:#ccc ${importlist[imports].import_date && ';margin-left:54px' || ''};margin-top:18px;font-family:Poppins;">${importlist[imports].import_name}</a>
   <img class="global-post-icon" src="https://cdn-prod.puprod.indreams.me/${userdb[importlist[imports].userID].imphash}_10" onerror="this.src='https://assets.indreams.me/images/users/default.png'" title="${userdb[importlist[imports].userID].username}" style="height: 20px; width: 20px; line-height: 20px; transform: scale(2) rotate(-5deg);">
   <a class="global-post-details" style="${importlist[imports].import_date && 'margin-left:54px;' || ''}position:absolute;margin-top:4px;">${importlist[imports].import_date || 'Pending Completion'}</a>
-  ${importlist[imports].source && '<div style="align-self:flex-end"><audio src="https://audio.dreams.kee7702.tk/' + importlist[imports].source + '.mp3" controls="" preload="none" loop="" style="width:100%;margin:4px 0"></audio></div>' || importlist[imports].sound_id && '<div style="align-self:flex-end"><audio src="/audio/' + importlist[imports].sound_id.replaceAll('-','/') + '.ogg" controls="" preload="none" loop="" style="width:100%;margin:4px 0"></audio></div>' || '<a style="padding: 12px;background: #fff2;font-size:16px;line-height: 30px;color:#CCC;font-family:Poppins;border-radius: 16px;height: 30px;align-self: flex-end;margin: 4px 0;">No Audio File</a>'}
+  ${importlist[imports].source && '<div style="align-self:flex-end"><audio src="https://audio.dreams.kee7702.tk/' + importlist[imports].source + '.mp3" controls="" preload="none" loop="" style="width:100%;margin:4px 0"></audio></div>' || importlist[imports].sound_id && '<div style="align-self:flex-end"><audio src="/audio/' + importlist[imports].sound_id.replaceAll('-', '/') + '.ogg" controls="" preload="none" loop="" style="width:100%;margin:4px 0"></audio></div>' || '<a style="padding: 12px;background: #fff2;font-size:16px;line-height: 30px;color:#CCC;font-family:Poppins;border-radius: 16px;height: 30px;align-self: flex-end;margin: 4px 0;">No Audio File</a>'}
 </div>`
             } while (importlist[imports + 1] && document.cookie.split("; ").find(a=>a.startsWith("limit="))?.split("=")[1] - 1 + (params.get("start") - 0) - imports != 0)
         }
@@ -33,7 +33,7 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
                 importicon = null;
                 var f = null
                   , d = null;
-                if (importlist[imports].browse_id == params.get("id") || importlist[imports].import_name == params.get("name")) {
+                if (importlist[imports].browse_id && importlist[imports].browse_id == params.get("id") || importlist[imports].import_name && importlist[imports].import_name == params.get("name")) {
                     var d = document.createElement("img");
                     d.style = "height:36px;width:36px;position:absolute",
                     d.onerror = function(a) {
@@ -44,10 +44,11 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
                     c.style = "font-size:16px;line-height:20px;color:#ccc",
                     c.className = "global-post-label",
                     c.textContent = importlist[imports].import_name;
-                    var e = document.createElement("img")
-                      , a = document.createElement("a");
-                    "Invalid Date" == new Date(importlist[imports].import_date).toString() && (importlist[imports].import_date = new Date(importlist[imports].import_date.split(" ")[0].substring(0, 3) + " " + importlist[imports].import_date.split(" ")[1].substring(0, importlist[imports].import_date.split(" ")[1].length - 3) + " " + importlist[imports].import_date.split(" ")[2]).toJSON()),
-                    Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 31536e6) > 1 ? a.textContent = "Published " + Math.floor((new Date - new Date(importlist[imports].import_date)) / 31536e6) + " years ago" : 1 == Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 31536e6) ? a.textContent = "Published " + Math.floor((new Date - new Date(importlist[imports].import_date)) / 31536e6) + " year ago" : Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 2592e6) > 1 ? a.textContent = "Published " + Math.floor((new Date - new Date(importlist[imports].import_date)) / 2592e6) + " months ago" : 1 == Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 2592e6) ? a.textContent = "Published " + Math.floor((new Date - new Date(importlist[imports].import_date)) / 2592e6) + " month ago" : Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 6048e5) > 1 ? a.textContent = "Published " + Math.floor((new Date - new Date(importlist[imports].import_date)) / 6048e5) + " weeks ago" : 1 == Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 6048e5) ? a.textContent = "Published " + Math.floor((new Date - new Date(importlist[imports].import_date)) / 6048e5) + " week ago" : Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 864e5) > 1 ? a.textContent = "Published " + Math.floor((new Date - new Date(importlist[imports].import_date)) / 864e5) + " days ago" : 1 == Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 864e5) ? a.textContent = "Published " + Math.floor((new Date - new Date(importlist[imports].import_date)) / 864e5) + " day ago" : Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 36e5) > 1 ? a.textContent = "Published " + Math.floor((new Date - new Date(importlist[imports].import_date)) / 36e5) + " hours ago" : 1 == Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 36e5) ? a.textContent = "Published " + Math.floor((new Date - new Date(importlist[imports].import_date)) / 36e5) + " hour ago" : Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 6e4) >= 1 ? a.textContent = "Published " + Math.floor((new Date - new Date(importlist[imports].import_date)) / 6e4) + " minutes ago" : 1 > Math.floor(Math.floor(new Date - new Date(importlist[imports].import_date)) / 6e4) ? a.textContent = "Published less than a minute ago" : "Invalid Date" !== new Date(importlist[imports].import_date).toDateString() ? a.textContent = new Date(importlist[imports].import_date).toDateString() : a.textContent = importlist[imports].import_date;
+                    var e = document.createElement("img");
+                    if(importlist[imports].import_date){
+                        var a = document.createElement("a")
+                            a.textContent = importlist[imports].import_date;
+                    a.style = `font-size: 16px;line-height: 20px;color: rgb(204, 204, 204);position: absolute;margin-top: 310px;padding: 10px 10px;background:${importlist[imports].img[0].color || '#333'};border-radius: 0 10px 0 0`};
                     var b = document.createElement("div");
                     if (b.className = "global-post-container",
                     b.style = `background:${importlist[imports].img[0].color || '#333'};margin-top:8px`,
@@ -56,20 +57,20 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
                         color: "#000000"
                     }],
                     importlist[imports].imgHash = null),
-                    c.style = `font-size:16px;line-height:20px;color:#ccc;padding:0 10px 10px 24px;background:${importlist[imports].img[0].color || '#333'};border-radius:0 0 10px 0;z-index:1`,
-                    a.style = `font-size: 16px;line-height: 20px;color: rgb(204, 204, 204);position: absolute;margin-top: 310px;padding: 10px 10px;background:${importlist[imports].img[0].color || '#333'};border-radius: 0 10px 0 0`,
-                    c.href = "https://indreams.me/" + importlist[imports].creation_id,
+                    c.style = `font-size:16px;line-height:20px;color:#ccc;padding:0 10px 10px 24px;background:${importlist[imports].img[0].color || '#333'};border-radius:0 0 10px 0;z-index:1`
+                        ,
                     c.rel = "noreferrer noopener",
                     c.target = "_blank",
-                    d.style = "width:100%;background-image:url('https://cdn-prod.puprod.indreams.me/" + importlist[imports].img[0].hash + "_11'),url('https://cdn-prod.puprod.indreams.me/" + importlist[imports].img[0].hash + "_7');background-color:" + importlist[imports].img[0].color + ";background-size: cover;background-position: center;height: 480px",
+                    d.style = "width:100%;background-image:url('https://cdn-prod.puprod.indreams.me/" + (importlist[imports].img[0].hash || '52b7d5cfd294eb16d10ae91e674640fd') + "_11'),url('https://cdn-prod.puprod.indreams.me/" + (importlist[imports].img[0].hash || '52b7d5cfd294eb16d10ae91e674640fd') + "_7');background-color:" + importlist[imports].img[0].color + ";background-size: cover;background-position: center;height: 480px",
                     d.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAQSURBVChTYxgFo4BywMAAAAJJAAEz00C7AAAAAElFTkSuQmCC",
-                    e.src = (userdb[importlist[imports].userID].impstored ? '/data/imp/' : ('https://cdn-prod.puprod.indreams.me/')) + userdb[importlist[imports].userID].imphash + "_10",
+                    e.src = 'https://cdn-prod.puprod.indreams.me/' + userdb[importlist[imports].userID].imphash + "_10",
                     e.onerror = function(a) {
                         this.src = "https://assets.indreams.me/images/users/default.png"
                     }
                     ,
                     e.style = "height:20px;width:20px;line-height:20px;transform:scale(2)rotate(-5deg);position:absolute;z-index:2",
-                    b.appendChild(a),
+                    (importlist[imports].import_date&&b.appendChild(a)),
+                        (importlist[imports].creation_id&&(c.href = ("https://indreams.me/" + importlist[imports].creation_id))),
                     b.appendChild(e),
                     b.appendChild(c),
                     b.appendChild(d),
@@ -81,13 +82,13 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
                         f.preload = "none",
                         f.src = 'https://audio.dreams.kee7702.tk/' + importlist[imports].source + '.mp3',
                         b.appendChild(f)
-                    } else if(importlist[imports].sound_id) {
+                    } else if (importlist[imports].sound_id) {
                         var f = new Audio;
                         f.style = "width:100%;border-radius:10px;margin-top:10px",
                         f.controls = !0,
                         f.loop = !0,
                         f.preload = "none",
-                        f.src = '/audio/' + importlist[imports].sound_id.replaceAll('-','/') + '.ogg',
+                        f.src = '/audio/' + importlist[imports].sound_id.replaceAll('-', '/') + '.ogg',
                         b.appendChild(f)
                     }
                     document.getElementById("audioClips").appendChild(b)
@@ -158,10 +159,10 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
                     imports++,
                     document.getElementById("audioClips").innerHTML += `<div style="margin:4px;padding:10px;display:inline-grid;text-align:center;background:${importlist[imports].img[0].color || '#333'};border-radius:10px;max-width:calc(100% - 28px);width:480px;height:120px;">
   ${Object.keys(importlist[imports].img[0]).length == 2 && '<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAALSURBVAgdY2BgAAAAAwABT0gKrwAAAABJRU5ErkJggg==" style="transform:scale(1.10345);height:50px;width:50px;position: absolute;background-image:url(&quot;/assets/images/cardOverlay.png&quot;), url(&quot;https://cdn-prod.puprod.indreams.me/' + importlist[imports].img[0].hash + '_2&quot;), url(&quot;https://cdn-prod.puprod.indreams.me/' + importlist[imports].img[0].hash + '_7&quot;);-webkit-mask-image:url(&quot;/assets/images/cardMaskImage.png&quot;);-webkit-mask-size:cover;border-radius:50%;background-color:' + importlist[imports].img[0].color + ';background-size:cover;background-position:centercenter;">' || ''}
-  <a class="global-post-label"${importlist[imports].browse_id && importlist[imports].creation_id && ' href="/imports?id=' + importlist[imports].browse_id + '"'} style="font-size:16px;line-height:27px;color:#ccc${importlist[imports].import_date && ';margin-left:54px' || ''};margin-top:18px;font-family:Poppins;">${importlist[imports].import_name}</a>
+  <a class="global-post-label"${importlist[imports].browse_id && importlist[imports].creation_id && ' href="/imports?id=' + importlist[imports].browse_id + '"'} style="font-size:16px;line-height:27px;color:#ccc ${importlist[imports].import_date && ';margin-left:54px' || ''};margin-top:18px;font-family:Poppins;">${importlist[imports].import_name}</a>
   <a class="global-post-icon" style="line-height: 20px;">${importlist[imports].import_date && 'check' || 'schedule'}</a>
   <a class="global-post-details" style="${importlist[imports].import_date && 'margin-left:54px;' || ''}position:absolute;margin-top:4px;">${importlist[imports].import_date || 'Pending Completion'}</a>
-  ${importlist[imports].source && '<div style="align-self:flex-end"><audio src="https://audio.dreams.kee7702.tk/' + importlist[imports].source + '.mp3" controls="" preload="none" loop="" style="width:100%;margin:4px 0"></audio></div>' || importlist[imports].sound_id && '<div style="align-self:flex-end"><audio src="/audio/' + importlist[imports].sound_id.replaceAll('-','/') + '.ogg" controls="" preload="none" loop="" style="width:100%;margin:4px 0"></audio></div>' || '<a style="padding:12px;background:#fff2;font-size:16px;line-height:30px;color:#CCC;font-family:Poppins;border-radius:16px;height:30px;align-self:flex-end;margin:4px 0;">No Audio File</a>'}
+  ${importlist[imports].source && '<div style="align-self:flex-end"><audio src="https://audio.dreams.kee7702.tk/' + importlist[imports].source + '.mp3" controls="" preload="none" loop="" style="width:100%;margin:4px 0"></audio></div>' || importlist[imports].sound_id && '<div style="align-self:flex-end"><audio src="/audio/' + importlist[imports].sound_id.replaceAll('-', '/') + '.ogg" controls="" preload="none" loop="" style="width:100%;margin:4px 0"></audio></div>' || '<a style="padding:12px;background:#fff2;font-size:16px;line-height:30px;color:#CCC;font-family:Poppins;border-radius:16px;height:30px;align-self:flex-end;margin:4px 0;">No Audio File</a>'}
 </div>`
                     !(importlist[imports + 1] && document.cookie.split("; ").find(a=>a.startsWith("limit="))?.split("=")[1] - 0 + (params.get("start") - 0) - imports != 0) && (document.getElementById('audioClips').children[0].remove())
                 } while (importlist[imports + 1] && document.cookie.split("; ").find(a=>a.startsWith("limit="))?.split("=")[1] - 0 + (params.get("start") - 0) - imports != 0)
