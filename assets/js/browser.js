@@ -73,7 +73,6 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
                     b.appendChild(e),
                     b.appendChild(c),
                     b.appendChild(d),
-                    importlist[imports].import_iconoverride && (e.textContent = importlist[imports].import_iconoverride),
                     importlist[imports].source) {
                         var f = new Audio;
                         f.style = "width:100%;border-radius:10px;margin-top:10px",
@@ -119,7 +118,7 @@ params.get("limit") && (document.cookie = "limit=" + params.get("limit") + "; ex
             document.getElementById("audioImports").innerHTML = "Audio Imports"),
             document.getElementById('audioClips').innerHTML = `<div style="margin:4px;padding:10px;display:inline-grid;text-align:center;background: #333;border-radius:10px;max-width:calc(100% - 28px);width:480px;height: 40px;"><a class="global-post-label" style="font-size: 16px;line-height:27px;color:#CCC;margin-top: 14px;font-family:Poppins;">Compiling Audio Imports</a><a class="global-post-icon" style="line-height: 20px;">loop</a><a class="global-post-details" style="position:absolute">Please Wait...</a></div>`,
             importlist[1] || document.getElementById("audioClipsContainer").remove(),
-            void 0 == importlist[0].importLimit && (importlist[0].importLimit = 60),
+            void 0 == importlist[0].importLimit && (importlist[0].importLimit = 180),
             document.getElementById("imp").src = (importlist[0].impstored ? '/data/imp/' : ('https://cdn-prod.puprod.indreams.me/')) + importlist[0].imphash + "_9",
             document.getElementById("username").innerHTML = importlist[0].username,
             document.getElementById("username").href = "//indreams.me/" + importlist[0].username,
