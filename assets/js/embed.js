@@ -68,7 +68,7 @@ const params = new URLSearchParams(window.location.search);
                     d.style = "width:calc(100% - 20px);border-radius:10px",
                     d.controls = !0,
                     d.loop = !0,
-                    d.src = '/audio/' + importlist[imports].sound_id.replaceAll('-', '/') + '.ogg',
+                    d.src = 'https://audio.dreams.kee7702.tk/' + importlist[imports].sound_id.replaceAll('-', '/') + '.ogg',
                     e.appendChild(d),
                     c.appendChild(e)
                 }
