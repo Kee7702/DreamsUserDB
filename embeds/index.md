@@ -1,13 +1,15 @@
 ## Embed Documentation
 # Embed the database into a custom webpage!
 #### The ability to embed imports is available at `/embed` which will allow you to specify an exact import name to embed.
-<style>iframe.userdbembed {margin-top:4px;border:none;width:calc(50% - 6px);aspect-ratio:16/9;box-shadow:black 0 3px 4px 0;border-radius:10px;display:inline-block}iframe.userdbembed:nth-child(even){margin-left:8px}</style>
+<style>iframe.userdbembed {margin:4px;border:none;width:320px;aspect-ratio:16/9;box-shadow:black 0 3px 4px 0;border-radius:10px;display:inline-block}</style>
 <div>
-  <iframe src="/embed?id=lbp2-move_main_2" class="userdbembed"></iframe>
-  <iframe src="/embed?id=lbp3-pod" class="userdbembed"></iframe>
-  <iframe src="/embed?id=lbp-pod" class="userdbembed"></iframe>
-  <iframe src="/embed?id=homebrew-channel" class="userdbembed"></iframe>
-  <iframe src="/embed?id=lbp2-lb2" class="userdbembed" style="resize:both;width:100%;max-width:100%;min-width:300px;height:120px;max-height:684px;min-height:72px;"></iframe></div>
+  <div class="home-content-container">
+    <iframe src="/embed?id=lbp2-move_main_2" class="userdbembed"></iframe>
+    <iframe src="/embed?id=lbp3-pod" class="userdbembed"></iframe>
+    <iframe src="/embed?id=lbp-pod" class="userdbembed"></iframe><iframe src="/embed?id=homebrew-channel" class="userdbembed"></iframe>
+  </div>
+  <iframe src="/embed?id=lbp2-lb2" class="userdbembed" style="resize:both;width:100%;max-width:calc(100% - 8px);min-width:300px;height:120px;max-height:684px;min-height:72px"></iframe>
+</div>
 
 ## Parameters
 #### ID
