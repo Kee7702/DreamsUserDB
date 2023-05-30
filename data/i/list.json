@@ -1327,6 +1327,36 @@
   },
   {
     "userID": "10",
+    "sound_id": "chasecraft-abandoned_mine",
+    "import_name": "Chasecraft - Abandoned Mine",
+    "img": [{}]
+  },
+  {
+    "userID": "10",
+    "sound_id": "chasecraft-dark_forest",
+    "import_name": "Chasecraft - Dark Forest",
+    "img": [{}]
+  },
+  {
+    "userID": "10",
+    "sound_id": "chasecraft-hot_desert",
+    "import_name": "Chasecraft - Hot Desert",
+    "img": [{}]
+  },
+  {
+    "userID": "10",
+    "sound_id": "chasecraft-misty_swamp",
+    "import_name": "Chasecraft - Misty Swamp",
+    "img": [{}]
+  },
+  {
+    "userID": "10",
+    "sound_id": "chasecraft-white_winter",
+    "import_name": "Chasecraft - Yeti Island",
+    "img": [{}]
+  },
+  {
+    "userID": "10",
     "sound_id": "minecraft-a_familiar_room",
     "import_name": "Minecraft - A Familiar Room",
     "img": [{}]
