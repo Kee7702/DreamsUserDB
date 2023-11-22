@@ -1,7 +1,34 @@
 [
   {
+    "userID": "16",
+    "import_name": "Amazing Grace (recording from 1922)",
+    "browse_id": "amazing-grace-rec-1922",
+    "import_date": "Oct 22, 2023",
+    "creation_id": "element/ojsHDTmBtaj",
+    "img": [
+      {
+        "hash": "289878cf9986d894eb855cf11ba97f9e",
+        "color": "#2c2f3b"
+      }
+    ]
+  },
+  {
     "userID": "10",
-    "source": "littlebigplanet-karting-intro_en",
+    "sound_id": "all_the_single_furries",
+    "import_name": "All the Single Furries!",
+    "browse_id": "all-the-single-furries",
+    "import_date": "Oct 14, 2023",
+    "creation_id": "element/oXyVBLVLxjw",
+    "img": [
+      {
+        "hash": "75f01b8e2fe61722d55654030b1f4247",
+        "color": "#432f21"
+      }
+    ]
+  },
+  {
+    "userID": "10",
+    "sound_id": "littlebigplanet-karting-intro_en",
     "import_name": "LittleBigPlanet Karting - Intro (English)",
     "browse_id": "lbpk-intro-en",
     "import_date": "Sep 18, 2023",
